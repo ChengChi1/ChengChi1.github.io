@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cheng Chi | Non-equilibrium Reacting Flows</title>
+    <meta
+      name="description"
+      content="Dr.-Ing. Cheng Chi studies non-equilibrium reacting flows driven by wall effects, turbulence, and mixture stratification using direct numerical simulation and scientific AI."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Cheng Chi | Non-equilibrium Reacting Flows" />
+    <meta
+      property="og:description"
+      content="A research profile organized around wall-, turbulence-, and mixture-stratification-induced non-equilibrium reacting flows."
+    />
+    <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
+    <link rel="stylesheet" href="styles.css?v=47" />
+    <script src="script.js?v=62" defer></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-nonequilibrium" viewBox="0 0 24 24">
+        <path d="M4 17c3-6 4-10 8-13 0 4 4 5 4 10" />
+        <path d="M8 19c0-3 2-5 4-7 0 3 3 4 3 7a3.5 3.5 0 0 1-7 0Z" />
+        <path d="M3 20h18" />
+      </symbol>
+      <symbol id="icon-wall-flame" viewBox="0 0 24 24">
+        <path d="M5 4v16" />
+        <path d="M8 5h3M8 9h3M8 13h3M8 17h3" />
+        <path d="M15 19c-1.7-1.1-2.2-3.1-.9-5.1.8-1.2 1.4-2.3 1.4-3.9 2.4 1.7 4.5 4 4.5 6.4A3.7 3.7 0 0 1 15 19Z" />
+      </symbol>
+      <symbol id="icon-particles" viewBox="0 0 24 24">
+        <circle cx="9" cy="14" r="4" />
+        <circle cx="17" cy="7" r="2" />
+        <circle cx="18" cy="17" r="1.5" />
+        <path d="M12.3 11.7 15.5 8.5M13 15.2l3.6 1" />
+      </symbol>
+      <symbol id="icon-interphase" viewBox="0 0 24 24">
+        <circle cx="8" cy="12" r="4" />
+        <path d="M15 5v14" />
+        <path d="M4 7c4-3 8-3 12 0" />
+        <path d="M4 17c4 3 8 3 12 0" />
+        <path d="M12 10h7" />
+        <path d="m16 7 3 3-3 3" />
+        <path d="M19 14h-7" />
+        <path d="m15 11-3 3 3 3" />
+      </symbol>
+      <symbol id="icon-flow" viewBox="0 0 24 24">
+        <path d="M4 8h9a3 3 0 1 0-3-3" />
+        <path d="M3 13h14a3 3 0 1 1-3 3" />
+        <path d="M5 18h5" />
+      </symbol>
+      <symbol id="icon-mixture" viewBox="0 0 24 24">
+        <path d="M6 6h12" />
+        <path d="M5 12c3-2 5-2 8 0s5 2 8 0" />
+        <path d="M6 18h12" />
+        <circle cx="8" cy="9" r="1" />
+        <circle cx="16" cy="15" r="1" />
+      </symbol>
+      <symbol id="icon-limit" viewBox="0 0 24 24">
+        <path d="M12 4v5" />
+        <path d="M12 15v5" />
+        <path d="M5 12h14" />
+        <path d="M8 8c-2 1-3 2.5-3 4s1 3 3 4" />
+        <path d="M16 8c2 1 3 2.5 3 4s-1 3-3 4" />
+      </symbol>
+      <symbol id="icon-porous" viewBox="0 0 24 24">
+        <circle cx="7" cy="7" r="2.5" />
+        <circle cx="16" cy="6" r="2" />
+        <circle cx="10" cy="15" r="3" />
+        <circle cx="18" cy="17" r="2.5" />
+        <path d="M9 8.5 14.2 7M8.4 9.2 9.2 12.2M12.8 15.7 15.8 16.4" />
+      </symbol>
+      <symbol id="icon-ai" viewBox="0 0 24 24">
+        <circle cx="6" cy="12" r="2" />
+        <circle cx="12" cy="6" r="2" />
+        <circle cx="18" cy="12" r="2" />
+        <circle cx="12" cy="18" r="2" />
+        <path d="M8 11 11 7.5M13 7.5 16 11M8 13l3 3.5M13 16.5l3-3.5M12 8v8" />
+      </symbol>
+      <symbol id="icon-methods" viewBox="0 0 24 24">
+        <path d="m9 7-5 5 5 5" />
+        <path d="m15 7 5 5-5 5" />
+        <path d="m13 5-2 14" />
+      </symbol>
+    </svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="masthead site-header" data-header>
+      <div class="masthead__inner-wrap">
+        <a class="site-title" href="#top" aria-label="Cheng Chi home">
+          Cheng Chi
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+
+        <nav class="greedy-nav site-nav" id="site-nav" data-nav>
+          <a href="#experience">Experience</a>
+          <a href="#research">Research</a>
+          <a href="#theme-publications">Papers</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-layout" id="main">
+      <aside class="sidebar sticky" id="top" aria-label="Author profile">
+        <div class="author__avatar">
+          <img src="assets-profile-cheng-avatar-eye23.jpg" alt="Portrait of Dr.-Ing. Cheng Chi" />
+        </div>
+
+        <div class="author__content">
+          <h2 class="author__name">Cheng Chi</h2>
+          <p class="author__bio">
+            Dr.-Ing. Researcher in direct numerical simulations and scientific AI
+            for non-equilibrium reacting flows.
+          </p>
+        </div>
+
+        <ul class="author__urls">
+          <li><strong>Affiliation</strong><span>Otto von Guericke University Magdeburg</span></li>
+          <li><a href="mailto:cheng.chi@ovgu.de">cheng.chi@ovgu.de</a></li>
+          <li><a href="assets-Cheng-Chi-CV.pdf">Download CV</a></li>
+          <li><a href="https://scholar.google.de/citations?user=B3I5BtIAAAAJ&hl=en">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-8512-8876">ORCID</a></li>
+          <li><a href="https://www.researchgate.net/profile/Cheng-Chi-20">ResearchGate</a></li>
+        </ul>
+      </aside>
+
+      <article class="page archive">
+        <header class="page__header">
+          <p class="page__meta">Research profile</p>
+          <h1 class="page__title">
+            <button
+              class="definition-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="nonequilibrium-definition"
+              data-definition-trigger
+            >
+              Non-equilibrium
+            </button>
+            reacting flows
+          </h1>
+          <div class="definition-popover" id="nonequilibrium-definition" role="note" data-definition-panel hidden>
+            <p>
+              <strong>Non-equilibrium:</strong> fast reaction (chemical equilibrium) assumption fails
+              when the timescale of other physical process (e.g. convection, diffusion ...) becomes
+              comparable to or even smaller than the flame timescale.
+            </p>
+            <figure class="definition-figure">
+              <img
+                src="assets-nonequilibrium-explanation.png"
+                alt="Conceptual diagram showing turbulence, wall heat loss, pressure waves, spray mixing, flame state, chemical response, equilibrium manifold, non-equilibrium state, and forcing versus chemical timescales."
+              />
+            </figure>
+          </div>
+          <p class="page__lead">
+            Reactive flow constitutes the physical foundation for sustainable energy and propulsion.
+            Multiscale nature of the reactive flow introduces non-equilibrium process, responsible
+            for intermittent rare events (e.g. extinction, reignition, abnormal pollutant emission,
+            extreme curvature, strain and burning rate) and challenging for modeling and prediction.
+          </p>
+          <p class="page__lead">
+            My research interests lie in 3 aspects: (1) reveal the hidden physics for non-equilibrium
+            reactive flows using Direct Numerical Simulations; (2) assess the causation for
+            intermittent rare events in sustainable energy and propulsion systems; (3) learn dynamic
+            non-Markovian manifold for non-equilibrium reactive flows and develop a generic physics-based AI model
+            for practical energy and propulsion systems.
+          </p>
+          <ul class="taxonomy__index" aria-label="Research keywords">
+            <li>wall effects</li>
+            <li>turbulence effects</li>
+            <li>mixture stratification</li>
+            <li>DNS</li>
+            <li>physics-based AI</li>
+            <li>dynamic non-Markovian manifold</li>
+          </ul>
+        </header>
+
+        <section class="page__content profile-summary" id="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title" class="archive__subtitle">Education and Research Experience</h2>
+          <div class="profile-timeline-grid">
+            <section class="profile-timeline" aria-labelledby="research-experience-title">
+              <p class="taxonomy-card__label" id="research-experience-title">Research experience</p>
+              <ol class="profile-timeline__list">
+                <li>
+                  <span class="profile-timeline__date">2026</span>
+                  <div>
+                    <h3>Visiting Professor</h3>
+                    <p>Kyoto University, Japan. Host: Prof. Ryoichi Kurose.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="profile-timeline__date">2024</span>
+                  <div>
+                    <h3>Visiting Professor</h3>
+                    <p>CERFACS, France. Host: Prof. Bénédicte Cuenot.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="profile-timeline__date">2021-present</span>
+                  <div>
+                    <h3>Group Leader</h3>
+                    <p>Otto von Guericke University Magdeburg, Germany.</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <section class="profile-timeline" aria-labelledby="education-title">
+              <p class="taxonomy-card__label" id="education-title">Education</p>
+              <ol class="profile-timeline__list">
+                <li>
+                  <span class="profile-timeline__date">2015-2021</span>
+                  <div>
+                    <h3>Ph.D. / Dr.-Ing.</h3>
+                    <p>Max Planck Institute for Dynamics of Complex Technical Systems, Germany.</p>
+                    <p>Otto von Guericke University Magdeburg, Germany.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="profile-timeline__date">2013-2015</span>
+                  <div>
+                    <h3>M.Sc.</h3>
+                    <p>King Abdullah University of Science and Technology, Saudi Arabia.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="profile-timeline__date">2009-2013</span>
+                  <div>
+                    <h3>B.Eng.</h3>
+                    <p>Huazhong University of Science and Technology, China.</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </section>
+
+        <section class="page__content" id="research" aria-labelledby="research-title">
+          <h2 id="research-title" class="archive__subtitle">Research themes</h2>
+
+          <div class="research-map" aria-label="Structured research themes">
+            <section class="research-domain research-domain--primary" aria-labelledby="theme-noneq">
+              <div class="research-domain__header">
+                <p class="taxonomy-card__label">Research on non-equilibrium process</p>
+                <h3 id="theme-noneq" class="theme-title">
+                  <svg class="theme-icon" aria-hidden="true"><use href="#icon-nonequilibrium"></use></svg>
+                  Non-equilibrium reacting-flow physics
+                </h3>
+              </div>
+
+              <div class="research-branches research-branches--papers" id="theme-publications" aria-label="Non-equilibrium process categories with journal articles">
+                <article class="research-branch research-branch--with-papers" id="theme-wall-flame">
+                  <p class="research-branch__axis">Wall-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-wall-flame"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Flame-wall interactions</h4>
+                      <p><span>Small timescale:</span> wall thermal diffusion.</p>
+                    </div>
+                  </div>
+                  <figure class="research-branch__media">
+                    <img
+                      src="assets-reactchannel-flame-wall.webp"
+                      alt="Animated simulation of a turbulent reacting channel flame interacting with walls."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <details class="theme-papers" aria-label="Flame-wall interaction journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>6</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="1"><p class="page__meta">2026</p><h5 class="archive__item-title">Turbulent flame-wall interaction: dynamics of flame thickness and combustion regime.</h5><p class="archive__item-excerpt"><em>Journal of Fluid Mechanics</em>. <a class="paper-link" href="https://doi.org/10.1017/jfm.2026.11189" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="2"><p class="page__meta">2025</p><h5 class="archive__item-title">A flame marker for ammonia/hydrogen/air premixed flames during flame/wall interactions.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2025.105935" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="4"><p class="page__meta">2024</p><h5 class="archive__item-title">Flame dynamic insights into emission characteristics of NH3/H2/air combustion in turbulent boundary layers.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2024.113723" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="5"><p class="page__meta">2024</p><h5 class="archive__item-title">Effect of differential diffusion on head-on quenching of premixed NH3/H2/air flames within turbulent boundary layers.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2024.105276" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="3"><p class="page__meta">2025</p><h5 class="archive__item-title">A numerical study of the stagnation flow premixed lean hydrogen/air flame stabilized at the wall with the focus on NO emission and flame-solid interaction.</h5><p class="archive__item-excerpt"><em>Journal of Thermal Science</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22A+numerical+study+of+the+stagnation+flow+premixed+lean+hydrogen%2Fair+flame+stabilized+at+the+wall+with+the+focus+on+NO+emission+and+flame-solid+interaction%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="6"><p class="page__meta">2023</p><h5 class="archive__item-title">Numerical investigation on the Head-on Quenching (HoQ) of laminar premixed lean to stoichiometric ammonia-hydrogen-air flames.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Numerical+investigation+on+the+Head-on+Quenching+of+laminar+premixed+lean+to+stoichiometric+ammonia-hydrogen-air+flames%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+
+                <article class="research-branch research-branch--with-papers" id="theme-interphase">
+                  <p class="research-branch__axis">Interphase heat/mass-transfer-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-interphase"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Interphase heat/mass transfer</h4>
+                      <p><span>Small timescale:</span> particle size/shape evolution and fluid-solid thermal/species exchange.</p>
+                    </div>
+                  </div>
+                  <figure class="research-branch__media research-branch__media--compact">
+                    <img
+                      src="assets-interphase-heat-mass-transfer.webp"
+                      alt="Animated simulation of interphase heat and mass transfer around reacting particles."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <details class="theme-papers" aria-label="Interphase heat/mass-transfer-induced non-equilibrium journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>6</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="10"><p class="page__meta">2025</p><h5 class="archive__item-title">A generalized memory effect in fluid/flame dynamics due to unsteady events.</h5><p class="archive__item-excerpt"><em>Particuology</em>. <a class="paper-link" href="https://doi.org/10.1016/j.partic.2025.05.021" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="7"><p class="page__meta">2023</p><h5 class="archive__item-title">Direct numerical simulations of polypropylene gasification in supercritical water.</h5><p class="archive__item-excerpt"><em>Physics of Fluids</em>. <a class="paper-link" href="https://doi.org/10.1063/5.0155831" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="34"><p class="page__meta">2025</p><h5 class="archive__item-title">A ghost-cell immersed boundary method for reacting flow simulations with conjugate heat transfer.</h5><p class="archive__item-excerpt"><em>Journal of Computational Physics</em>. <a class="paper-link" href="https://doi.org/10.1016/j.jcp.2025.114399" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="8"><p class="page__meta">2022</p><h5 class="archive__item-title">Fully resolved direct numerical simulation of single coal particle gasification in supercritical water.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2022.125474" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="9"><p class="page__meta">2022</p><h5 class="archive__item-title">Interface-resolved direct numerical simulations of interphase momentum, heat, and mass transfer in supercritical water gasification of coal.</h5><p class="archive__item-excerpt"><em>Physics of Fluids</em>. <a class="paper-link" href="https://doi.org/10.1063/5.0122481" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="39"><p class="page__meta">2022</p><h5 class="archive__item-title">A directional ghost-cell immersed boundary method for low Mach number reacting flows with interphase heat and mass transfer.</h5><p class="archive__item-excerpt"><em>Journal of Computational Physics</em>. <a class="paper-link" href="https://doi.org/10.1016/j.jcp.2022.111447" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+
+                <article class="research-branch research-branch--with-papers" id="theme-flow">
+                  <p class="research-branch__axis">Flow-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-flow"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>High-Karlovitz-number flames</h4>
+                      <p><span>Small timescale:</span> Kolmogorov-scale turbulent motion.</p>
+                    </div>
+                  </div>
+                  <figure class="research-branch__media research-branch__media--movies high-ka-movies" aria-label="High- and low-Karlovitz flame evolution at different Reynolds numbers">
+                    <div class="high-ka-movies__grid">
+                      <div class="high-ka-movies__item high-ka-movies__item--high-high">
+                        <img src="assets-high-ka-movies-highka-highre.webp?v=compact-20260707" alt="High-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <span>High Ka / High Re</span>
+                      </div>
+                      <div class="high-ka-movies__item high-ka-movies__item--high-low">
+                        <img src="assets-high-ka-movies-highka-lowre.webp?v=compact-20260707" alt="High-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <span>High Ka / Low Re</span>
+                      </div>
+                      <div class="high-ka-movies__item high-ka-movies__item--low-high">
+                        <img src="assets-high-ka-movies-lowka-highre.webp?v=compact-20260707" alt="Low-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <span>Low Ka / High Re</span>
+                      </div>
+                      <div class="high-ka-movies__item high-ka-movies__item--low-low">
+                        <img src="assets-high-ka-movies-lowka-lowre.webp?v=compact-20260707" alt="Low-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <span>Low Ka / Low Re</span>
+                      </div>
+                    </div>
+                  </figure>
+                  <details class="theme-papers" aria-label="Flow-induced non-equilibrium journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>7</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="19"><p class="page__meta">2026</p><h5 class="archive__item-title">Local extinction characteristics of turbulent premixed H2/air flame under sub-atmospheric pressure conditions: a DNS study.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2025.114580" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="18"><p class="page__meta">2022</p><h5 class="archive__item-title">Effects of molecular diffusion modeling on turbulent premixed NH3/H2/air flames.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2022.08.074" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="25"><p class="page__meta">2018</p><h5 class="archive__item-title">Direct numerical simulations of hotspot-induced ignition in homogeneous hydrogen-air pre-mixtures and ignition spot tracking.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Direct+numerical+simulations+of+hotspot-induced+ignition+in+homogeneous+hydrogen-air+pre-mixtures+and+ignition+spot+tracking%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="11"><p class="page__meta">2025</p><h5 class="archive__item-title">Detached eddy simulation (DES) of a turbulent premixed flame stabilized on a bluff body.</h5><p class="archive__item-excerpt"><em>Proceedings in Applied Mathematics and Mechanics</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Detached+eddy+simulation+of+a+turbulent+premixed+flame+stabilized+on+a+bluff+body%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="21"><p class="page__meta">2024</p><h5 class="archive__item-title">Effects of cryogenic temperature on turbulent premixed hydrogen/air flames.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2024.105749" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="22"><p class="page__meta">2024</p><h5 class="archive__item-title">Direct numerical simulations of turbulent premixed cool flames: Global and local flame dynamics analysis.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2024.113759" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="23"><p class="page__meta">2024</p><h5 class="archive__item-title">Temperature effect on turbulent burning velocity of lean premixed hydrogen/air flames.</h5><p class="archive__item-excerpt"><em>Physics of Fluids</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Temperature+effect+on+turbulent+burning+velocity+of+lean+premixed+hydrogen%2Fair+flames%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+
+                <article class="research-branch research-branch--with-papers" id="theme-mixture">
+                  <p class="research-branch__axis">Mixture-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-mixture"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Stratified flames</h4>
+                      <p><span>Small timescale:</span> species and molecular diffusion.</p>
+                    </div>
+                  </div>
+                  <details class="theme-papers" aria-label="Mixture-induced non-equilibrium journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>4</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="15"><p class="page__meta">2025</p><h5 class="archive__item-title">Reactivity stratified flame to enhance ammonia combustion with hydrogen: Effects of temperature, pressure, downstream mixture, and molecular diffusion.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2025.105907" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="16"><p class="page__meta">2024</p><h5 class="archive__item-title">Revisiting performance of reactivity stratification with hydrogen addition for ammonia combustion.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2024.105381" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="17"><p class="page__meta">2023</p><h5 class="archive__item-title">DNS study on reactivity stratification with prechamber H2/air turbulent jet flame to enhance NH3/air combustion in gas engines.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2023.128387" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="24"><p class="page__meta">2022</p><h5 class="archive__item-title">Transient ignition of premixed methane/air mixtures by a pre-chamber hot jet: A DNS study.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Transient+ignition+of+premixed+methane%2Fair+mixtures+by+a+pre-chamber+hot+jet%3A+A+DNS+study%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+
+                <article class="research-branch research-branch--with-papers" id="theme-reaction">
+                  <p class="research-branch__axis">Reaction-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-limit"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Flames near flammability limits</h4>
+                      <p><span>Large timescale:</span> flame propagation.</p>
+                    </div>
+                  </div>
+                  <details class="theme-papers" aria-label="Reaction-induced non-equilibrium journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>1</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="20"><p class="page__meta">2026</p><h5 class="archive__item-title">Ultra-lean diffusion-controlled 2D premixed hydrogen/air flames.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2026.106078" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+
+                <article class="research-branch research-branch--with-papers" id="theme-porous">
+                  <p class="research-branch__axis">Porous-matrix-induced</p>
+                  <div class="research-branch__heading">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-porous"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Porous-matrix reacting transport</h4>
+                      <p><span>Small timescale:</span> pore-scale transport and matrix heat/mass exchange.</p>
+                    </div>
+                  </div>
+                  <figure class="research-branch__media research-branch__media--compact">
+                    <img
+                      src="assets-porous-matrix-reacting-transport.webp"
+                      alt="Animated simulation of reacting transport through a porous matrix."
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <details class="theme-papers" aria-label="Porous-matrix-induced non-equilibrium journal articles">
+                    <summary class="theme-papers__summary">Journal articles <span>2</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="35"><p class="page__meta">2024</p><h5 class="archive__item-title">A parameter-free and monolithic approach for multiscale simulations of flows, transport, and chemical reactions in porous media.</h5><p class="archive__item-excerpt"><em>Journal of Computational Physics</em>. <a class="paper-link" href="https://doi.org/10.1016/j.jcp.2024.113203" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="36"><p class="page__meta">2024</p><h5 class="archive__item-title">A one-domain pore-resolved approach for multiphase flows in porous media.</h5><p class="archive__item-excerpt"><em>Physics of Fluids</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22A+one-domain+pore-resolved+approach+for+multiphase+flows+in+porous+media%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                  </details>
+                </article>
+              </div>
+            </section>
+
+            <section class="research-domain research-domain--with-papers" aria-labelledby="theme-ai">
+              <p class="taxonomy-card__label">Research on physics-based AI model</p>
+              <h3 id="theme-ai" class="theme-title">
+                <svg class="theme-icon" aria-hidden="true"><use href="#icon-ai"></use></svg>
+                Physics-based AI model
+              </h3>
+              <p>Learning dynamic non-Markovian chemical coordinates, flame markers, neural manifolds, and physics-based AI closures for practical energy and propulsion systems.</p>
+              <details class="theme-papers" aria-label="Physics-based AI journal articles">
+                <summary class="theme-papers__summary">Journal articles <span>4</span></summary>
+                <div class="list__item"><article class="archive__item" data-paper-index="26"><p class="page__meta">2026</p><h5 class="archive__item-title">Chemical reaction neural networks for semi-detailed kinetics including the influence of inorganics and secondary reactions during cellulose pyrolysis.</h5><p class="archive__item-excerpt"><em>Energy Conversion and Management</em>. <a class="paper-link" href="https://doi.org/10.1016/j.enconman.2025.120655" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="29"><p class="page__meta">2022</p><h5 class="archive__item-title">Data-driven discovery of heat release rate markers for premixed NH3/H2/air flames using physics-informed machine learning.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2022.125508" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="30"><p class="page__meta">2022</p><h5 class="archive__item-title">Efficient premixed turbulent combustion simulations using flamelet manifold neural networks: A priori and a posteriori assessment.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2022.112325" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="31"><p class="page__meta">2021</p><h5 class="archive__item-title">On-the-fly artificial neural network for chemical kinetics in direct numerical simulations of premixed combustion.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2020.12.038" target="_blank" rel="noopener">Paper</a></p></article></div>
+              </details>
+            </section>
+
+            <section class="research-domain research-domain--with-papers" aria-labelledby="theme-other">
+              <p class="taxonomy-card__label">Other research works</p>
+              <h3 id="theme-other" class="theme-title">
+                <svg class="theme-icon" aria-hidden="true"><use href="#icon-methods"></use></svg>
+                Numerical methods and enabling studies
+              </h3>
+              <p>Interface-resolved algorithms, immersed-boundary methods, flow diagnostics, and simulation infrastructure supporting reactive-flow DNS.</p>
+              <details class="theme-papers" aria-label="Other research work journal articles">
+                <summary class="theme-papers__summary">Journal articles <span>12</span></summary>
+                <div class="list__item"><article class="archive__item" data-paper-index="12"><p class="page__meta">2023</p><h5 class="archive__item-title">Interaction of a turbulent flame with the very-large-scale structures in a channel flow.</h5><p class="archive__item-excerpt"><em>European Journal of Mechanics / B Fluids</em>. <a class="paper-link" href="https://doi.org/10.1016/j.euromechflu.2023.05.008" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="13"><p class="page__meta">2022</p><h5 class="archive__item-title">Identification and analysis of very-large-scale turbulent motions using multiscale proper orthogonal decomposition.</h5><p class="archive__item-excerpt"><em>Physical Review Fluids</em>. <a class="paper-link" href="https://doi.org/10.1103/physrevfluids.7.084603" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="41"><p class="page__meta">2020</p><h5 class="archive__item-title">A directional ghost-cell immersed boundary method for incompressible flows.</h5><p class="archive__item-excerpt"><em>Journal of Computational Physics</em>. <a class="paper-link" href="https://doi.org/10.1016/j.jcp.2019.109122" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="32"><p class="page__meta">2019</p><h5 class="archive__item-title">DNS study of the optimal heat release rate marker in premixed methane flames.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2018.07.095" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="33"><p class="page__meta">2017</p><h5 class="archive__item-title">DNS study of the optimal chemical markers for heat release in syngas flames.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22DNS+study+of+the+optimal+chemical+markers+for+heat+release+in+syngas+flames%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="42"><p class="page__meta">2017</p><h5 class="archive__item-title">An improved ghost-cell immersed boundary method for compressible flow simulations.</h5><p class="archive__item-excerpt"><em>International Journal for Numerical Methods in Fluids</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22An+improved+ghost-cell+immersed+boundary+method+for+compressible+flow+simulations%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="27"><p class="page__meta">2025</p><h5 class="archive__item-title">A reduced kinetic mechanism for ammonia/hydrogen mixtures with alleviated stiffness and high accuracy tailored for high-fidelity numerical simulations.</h5><p class="archive__item-excerpt"><em>Applications in Energy and Combustion Science</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22A+reduced+kinetic+mechanism+for+ammonia%2Fhydrogen+mixtures+with+alleviated+stiffness+and+high+accuracy+tailored+for+high-fidelity+numerical+simulations%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="28"><p class="page__meta">2023</p><h5 class="archive__item-title">A dedicated reduced kinetic model for ammonia/dimethyl-ether turbulent premixed flames.</h5><p class="archive__item-excerpt"><em>Combustion and Flame</em>. <a class="paper-link" href="https://doi.org/10.1016/j.combustflame.2023.113002" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="37"><p class="page__meta">2023</p><h5 class="archive__item-title">Direct numerical simulation of the transitional airflow in a patient-specific larynx during exhalation.</h5><p class="archive__item-excerpt"><em>Computers and Fluids</em>. <a class="paper-link" href="https://doi.org/10.1016/j.compfluid.2023.105819" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="38"><p class="page__meta">2023</p><h5 class="archive__item-title">Autonomous particles for in-situ-friendly flow map sampling.</h5><p class="archive__item-excerpt"><em>Proceedings of the Conference on Vision, Modeling, and Visualization</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Autonomous+particles+for+in-situ-friendly+flow+map+sampling%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="14"><p class="page__meta">2021</p><h5 class="archive__item-title">Combustion mode and mixing characteristics of a reacting jet in crossflow.</h5><p class="archive__item-excerpt"><em>Energy &amp; Fuels</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Combustion+mode+and+mixing+characteristics+of+a+reacting+jet+in+crossflow%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="40"><p class="page__meta">2021</p><h5 class="archive__item-title">Direct numerical simulation of turbulent spray combustion in the SpraySyn burner: Impact of injector geometry.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Direct+numerical+simulation+of+turbulent+spray+combustion+in+the+SpraySyn+burner%3A+Impact+of+injector+geometry%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+              </details>
+            </section>
+          </div>
+        </section>
+        <section class="page__content" id="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title" class="archive__subtitle">Projects, teaching, and recognition</h2>
+          <div class="archive-grid">
+            <article class="funding-card">
+              <p class="page__meta">Funding</p>
+              <h3>Third-party funding</h3>
+              <ul class="funding-list" aria-label="Third-party funding">
+                <li>
+                  <h4>DFG Priority Program 2419 (AddBluff4NH3/H2)</h4>
+                  <p>Additively manufactured bluff body burner investigated by DNS and experiments for fuel-flexible, stable, and safe NH3/H2 combustion.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2024-2027</dd></div>
+                    <div><dt>Amount</dt><dd>€645,300</dd></div>
+                    <div><dt>Role</dt><dd>Co-PI, Project Coordinator, Supervision of Dr. Guan</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>DFG Project TH881/38-1 (DADOREN)</h4>
+                  <p>Direct numerical simulations and scientific AI analysis of ignition and combustion in realistic pre-chamber/engine systems with NH3/H2 blend fuel.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2023-2026</dd></div>
+                    <div><dt>Amount</dt><dd>€265,600</dd></div>
+                    <div><dt>Role</dt><dd>Co-PI, Project Coordinator, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>German Excellence Research Initiative SmartProSys, Project 06</h4>
+                  <p>Thermochemical decomposition under supercritical conditions.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2022-2024</dd></div>
+                    <div><dt>Amount</dt><dd>€132,200</dd></div>
+                    <div><dt>Role</dt><dd>Person in charge</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>European Regional Development Fund, ZS/2021/10/161306</h4>
+                  <p>Direct numerical simulations of prechamber hot jet ignition.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2021-2022</dd></div>
+                    <div><dt>Amount</dt><dd>€65,000</dd></div>
+                    <div><dt>Role</dt><dd>Person in charge</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>DFG Priority Program 1881 (TH881/30-1)</h4>
+                  <p>DNS and visual analysis of superstructures in turbulent channels with mixing by parallel injection.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2020-2022</dd></div>
+                    <div><dt>Amount</dt><dd>€263,400</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>European Regional Development Fund, ZS/2017/01/83590</h4>
+                  <p>Reman-Gasmotor mit Vorkammerzündung.</p>
+                  <dl>
+                    <div><dt>Date</dt><dd>2018-2020</dd></div>
+                    <div><dt>Amount</dt><dd>€183,200</dd></div>
+                    <div><dt>Role</dt><dd>Person in charge</dd></div>
+                  </dl>
+                </li>
+              </ul>
+            </article>
+            <article class="hpc-card">
+              <p class="page__meta">HPC</p>
+              <h3>JUWELS and SuperMUC-NG allocations</h3>
+              <ul class="funding-list hpc-list" aria-label="HPC projects">
+                <li>
+                  <h4>Direct Numerical Simulation of gasification and pyrolysis of polypropylene</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2026-2028</dd></div>
+                    <div><dt>System</dt><dd>SuperMUC-NG</dd></div>
+                    <div><dt>Allocation</dt><dd>24.73 Mcore-h and 900 GPU-h</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Direct Numerical Simulation of Pyrolysis of Biomass Particles</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2026-2027</dd></div>
+                    <div><dt>System</dt><dd>JUWELS</dd></div>
+                    <div><dt>Allocation</dt><dd>17 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li id="nic-excellence-project">
+                  <h4>Direct numerical simulations of ignition and combustion in realistic pre-chamber/engine systems with NH3/H2 blend fuel</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2023-2027</dd></div>
+                    <div><dt>System</dt><dd>JUWELS</dd></div>
+                    <div><dt>Allocation</dt><dd>55.7 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>PI, Project initiation, Project Manager</dd></div>
+                    <div><dt>Recognition</dt><dd><a href="https://www.john-von-neumann-institut.de/en/research/nic-excellence-projects/2025-1" target="_blank" rel="noopener">NIC Excellence Project 2025</a></dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Study of turbulent flame properties for ammonia blended with DME by Direct Numerical Simulation</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2022-2024</dd></div>
+                    <div><dt>System</dt><dd>SuperMUC-NG</dd></div>
+                    <div><dt>Allocation</dt><dd>10.52 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Sound Induced by Oscillating Flows in a Moving Airway</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2021-2024</dd></div>
+                    <div><dt>System</dt><dd>JUWELS</dd></div>
+                    <div><dt>Allocation</dt><dd>19.5 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>DNS and Visual Analysis of Superstructures in Turbulent Channels with Mixing by Parallel Injection</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2020-2023</dd></div>
+                    <div><dt>System</dt><dd>JUWELS</dd></div>
+                    <div><dt>Allocation</dt><dd>35 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>Project initiation, Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Modulation of Turbulent Properties in a Spray Flame Burning n-Heptane: Direct Numerical Simulation</h4>
+                  <dl>
+                    <div><dt>Date</dt><dd>2017-2022</dd></div>
+                    <div><dt>System</dt><dd>SuperMUC-NG</dd></div>
+                    <div><dt>Allocation</dt><dd>88.6 Mcore-h</dd></div>
+                    <div><dt>Role</dt><dd>Proposal preparation, Project Manager</dd></div>
+                  </dl>
+                </li>
+              </ul>
+            </article>
+            <article class="teaching-card">
+              <p class="page__meta">Teaching</p>
+              <h3>Advanced Fluid Dynamics and CFD</h3>
+              <ul class="funding-list teaching-list" aria-label="Teaching activities">
+                <li>
+                  <h4>Advanced Fluid Dynamics</h4>
+                  <dl>
+                    <div><dt>Full lectureship</dt><dd>04/2026-07/2026; 04/2025-07/2025</dd></div>
+                    <div><dt>Lectureship</dt><dd>04/2024-07/2024</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Computational Fluid Dynamics</h4>
+                  <dl>
+                    <div><dt>Full lectureship</dt><dd>10/2025-02/2026; 10/2024-02/2025</dd></div>
+                    <div><dt>TA + part lectureship</dt><dd>04/2024-07/2024; 10/2023-02/2024</dd></div>
+                    <div><dt>Teaching assistant</dt><dd>04/2023-07/2023</dd></div>
+                  </dl>
+                </li>
+              </ul>
+            </article>
+            <article class="honors-card">
+              <p class="page__meta">Honors</p>
+              <h3>Honors, awards, and scholarships</h3>
+              <ul class="funding-list honors-list" aria-label="Honors, awards, and scholarships">
+                <li>
+                  <h4>JSPS Fellowship</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2026</dd></div>
+                    <div><dt>Country</dt><dd>Japan</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4><a href="https://www.john-von-neumann-institut.de/en/research/nic-excellence-projects/2025-1" target="_blank" rel="noopener">NIC Excellence Project</a></h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2025</dd></div>
+                    <div><dt>Country</dt><dd>Germany</dd></div>
+                    <div><dt>Role</dt><dd>PI and Project Manager</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>summa cum laude Ph.D. thesis</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2021</dd></div>
+                    <div><dt>Country</dt><dd>Germany</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>Chinese Government Award for outstanding self-financed students abroad</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2020</dd></div>
+                    <div><dt>Country</dt><dd>China</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>IMPRS Scholarship, Max Planck Institute</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2015</dd></div>
+                    <div><dt>Country</dt><dd>Germany</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>KAUST Research Scholarship</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2013</dd></div>
+                    <div><dt>Country</dt><dd>Saudi Arabia</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>The Lloyd’s Register Educational Trust Scholarship</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2012</dd></div>
+                    <div><dt>Country</dt><dd>United Kingdom</dd></div>
+                  </dl>
+                </li>
+                <li>
+                  <h4>National Scholarship</h4>
+                  <dl>
+                    <div><dt>Year</dt><dd>2010</dd></div>
+                    <div><dt>Country</dt><dd>China</dd></div>
+                  </dl>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="page__content" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="archive__subtitle">Contact</h2>
+          <p>
+            I welcome conversations about non-equilibrium reacting flows, DNS, ammonia/hydrogen
+            combustion, high-Ka flames, flame-wall interaction, and scientific AI.
+          </p>
+          <p class="contact-line">
+            <a href="mailto:cheng.chi@ovgu.de">cheng.chi@ovgu.de</a>
+            <span>/</span>
+            <a href="https://www.lss.ovgu.de">LSS OVGU</a>
+            <span>/</span>
+            <a href="https://scholar.google.de/citations?user=B3I5BtIAAAAJ&hl=en">Google Scholar</a>
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="page__footer">
+      <p>c 2026 Cheng Chi. Static research profile inspired by Academic Pages.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>
