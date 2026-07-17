@@ -272,6 +272,12 @@ strong {
   font-weight: 700;
 }
 
+.page__definition-link {
+  margin: -4px 0 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .definition-trigger {
   appearance: none;
   display: inline-flex;
