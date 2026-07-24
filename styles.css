@@ -658,6 +658,46 @@ strong {
   white-space: normal;
 }
 
+.flammability-movies {
+  padding: 0;
+}
+
+.flammability-movies__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 10px;
+  min-width: 520px;
+  align-items: end;
+}
+
+.flammability-movies__item {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 5px;
+  min-width: 0;
+  background: #fff;
+}
+
+.flammability-movies__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flammability-movies__item span {
+  color: #27323a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.flammability-movies__item var {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08em;
+  font-style: italic;
+}
+
 .research-branch__heading--method {
   margin-bottom: 0.2rem;
 }
