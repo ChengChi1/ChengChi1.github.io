@@ -15,15 +15,17 @@
       content="AI-assisted reacting-flow research combining high-fidelity simulation, non-equilibrium physics, and interpretable scientific AI."
     />
     <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
-    <link rel="stylesheet" href="styles.css?v=49" />
+    <link rel="stylesheet" href="styles.css?v=50" />
     <script src="script.js?v=62" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
-      <symbol id="icon-nonequilibrium" viewBox="0 0 24 24">
-        <path d="M4 17c3-6 4-10 8-13 0 4 4 5 4 10" />
-        <path d="M8 19c0-3 2-5 4-7 0 3 3 4 3 7a3.5 3.5 0 0 1-7 0Z" />
-        <path d="M3 20h18" />
+      <symbol id="icon-database-flow" viewBox="0 0 24 24">
+        <ellipse cx="9" cy="5" rx="5.5" ry="2.5" />
+        <path d="M3.5 5v5c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5V5" />
+        <path d="M3.5 10v5c0 1.4 2.5 2.5 5.5 2.5 1 0 1.9-.1 2.7-.4" />
+        <path d="M17.5 20c-2.4-1.2-3-3.7-1.4-6 .9-1.2 1.5-2.3 1.4-4 2.5 1.8 4 4 4 6.3a4 4 0 0 1-4 3.7Z" />
+        <path d="M17.8 19c-1-.7-1.1-1.9-.2-3.1.4-.6.8-1.1.8-1.8 1.1.9 1.7 1.8 1.7 2.8a2.1 2.1 0 0 1-2.3 2.1Z" />
       </symbol>
       <symbol id="icon-wall-flame" viewBox="0 0 24 24">
         <path d="M5 4v16" />
@@ -83,6 +85,24 @@
         <path d="m9 7-5 5 5 5" />
         <path d="m15 7 5 5-5 5" />
         <path d="m13 5-2 14" />
+      </symbol>
+      <symbol id="icon-immersed-boundary" viewBox="0 0 24 24">
+        <path d="M4 4v16M10 4v16M16 4v16M4 7h16M4 13h16M4 19h16" />
+        <path d="M3 18c5-1 5-10 9-11 3-.8 5 1 9-3" />
+        <circle cx="16" cy="13" r="1.6" />
+      </symbol>
+      <symbol id="icon-marker" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+        <path d="M12 15c-1.2-.8-1.5-2.2-.6-3.6.5-.7.8-1.3.8-2.1 1.4 1 2.3 2.2 2.3 3.4A2.5 2.5 0 0 1 12 15Z" />
+      </symbol>
+      <symbol id="icon-chemistry-reduction" viewBox="0 0 24 24">
+        <circle cx="5" cy="5" r="2" />
+        <circle cx="12" cy="4" r="2" />
+        <circle cx="19" cy="5" r="2" />
+        <path d="M6.5 6.4 9 9M12 6v3M17.5 6.4 15 9" />
+        <path d="M7 9h10l-3.5 5v4l-3 2v-6Z" />
       </symbol>
       <symbol id="icon-application" viewBox="0 0 24 24">
         <path d="M5 19c4-1 7-4 9-8l2-5c2 2 3 5 2 8-1 4-5 7-9 7" />
@@ -231,7 +251,7 @@
               <div class="research-domain__header">
                 <p class="taxonomy-card__label">Reacting flow physics</p>
                 <h3 id="theme-noneq" class="theme-title">
-                  <svg class="theme-icon" aria-hidden="true"><use href="#icon-nonequilibrium"></use></svg>
+                  <svg class="theme-icon" aria-hidden="true"><use href="#icon-database-flow"></use></svg>
                   High-fidelity reacting flow database
                 </h3>
               </div>
@@ -445,8 +465,14 @@
               <div class="research-branches research-branches--papers" aria-label="Numerical algorithm and AI methodology sub-themes">
                 <article class="research-branch research-branch--with-papers" id="theme-ai-methodology">
                   <p class="research-branch__axis">Learning and reduced-order modeling</p>
-                  <h4>AI methodology</h4>
-                  <p>Physics-based learning, dynamic non-Markovian manifolds, neural reduced-order models, and multiscale data decomposition.</p>
+                  <div class="research-branch__heading research-branch__heading--method">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-ai"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>AI methodology</h4>
+                      <p>Physics-based learning, dynamic non-Markovian manifolds, neural reduced-order models, and multiscale data decomposition.</p>
+                    </div>
+                  </div>
                   <details class="theme-papers" aria-label="AI methodology journal articles">
                     <summary class="theme-papers__summary">Journal articles <span>6</span></summary>
                     <div class="list__item"><article class="archive__item" data-paper-index="26"><p class="page__meta">2026</p><h5 class="archive__item-title">Chemical reaction neural networks for semi-detailed kinetics including the influence of inorganics and secondary reactions during cellulose pyrolysis.</h5><p class="archive__item-excerpt"><em>Energy Conversion and Management</em>. <a class="paper-link" href="https://doi.org/10.1016/j.enconman.2025.120655" target="_blank" rel="noopener">Paper</a></p></article></div>
@@ -460,8 +486,14 @@
 
                 <article class="research-branch research-branch--with-papers" id="theme-immersed-boundary">
                   <p class="research-branch__axis">Interface-resolved algorithms</p>
-                  <h4>Immersed boundary method</h4>
-                  <p>Ghost-cell formulations for incompressible, compressible, and reacting flows with conjugate interphase transport.</p>
+                  <div class="research-branch__heading research-branch__heading--method">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-immersed-boundary"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Immersed boundary method</h4>
+                      <p>Ghost-cell formulations for incompressible, compressible, and reacting flows with conjugate interphase transport.</p>
+                    </div>
+                  </div>
                   <details class="theme-papers" aria-label="Immersed boundary method journal articles">
                     <summary class="theme-papers__summary">Journal articles <span>4</span></summary>
                     <div class="list__item"><article class="archive__item" data-paper-index="34"><p class="page__meta">2025</p><h5 class="archive__item-title">A ghost-cell immersed boundary method for reacting flow simulations with conjugate heat transfer.</h5><p class="archive__item-excerpt"><em>Journal of Computational Physics</em>. <a class="paper-link" href="https://doi.org/10.1016/j.jcp.2025.114399" target="_blank" rel="noopener">Paper</a></p></article></div>
@@ -473,10 +505,18 @@
 
                 <article class="research-branch research-branch--with-papers" id="theme-heat-release-marker">
                   <p class="research-branch__axis">Physics-informed diagnostics</p>
-                  <h4>Heat release rate marker</h4>
-                  <p>Optimal chemical observables that robustly identify heat release in premixed reacting-flow fields.</p>
+                  <div class="research-branch__heading research-branch__heading--method">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-marker"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Heat release rate marker</h4>
+                      <p>Optimal chemical observables that robustly identify heat release in premixed reacting-flow fields.</p>
+                    </div>
+                  </div>
                   <details class="theme-papers" aria-label="Heat release rate marker journal articles">
-                    <summary class="theme-papers__summary">Journal articles <span>2</span></summary>
+                    <summary class="theme-papers__summary">Journal articles <span>4</span></summary>
+                    <div class="list__item"><article class="archive__item" data-paper-index="2"><p class="page__meta">2025</p><h5 class="archive__item-title">A flame marker for ammonia/hydrogen/air premixed flames during flame/wall interactions.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2025.105935" target="_blank" rel="noopener">Paper</a></p></article></div>
+                    <div class="list__item"><article class="archive__item" data-paper-index="29"><p class="page__meta">2022</p><h5 class="archive__item-title">Data-driven discovery of heat release rate markers for premixed NH3/H2/air flames using physics-informed machine learning.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2022.125508" target="_blank" rel="noopener">Paper</a></p></article></div>
                     <div class="list__item"><article class="archive__item" data-paper-index="32"><p class="page__meta">2019</p><h5 class="archive__item-title">DNS study of the optimal heat release rate marker in premixed methane flames.</h5><p class="archive__item-excerpt"><em>Proceedings of the Combustion Institute</em>. <a class="paper-link" href="https://doi.org/10.1016/j.proci.2018.07.095" target="_blank" rel="noopener">Paper</a></p></article></div>
                     <div class="list__item"><article class="archive__item" data-paper-index="33"><p class="page__meta">2017</p><h5 class="archive__item-title">DNS study of the optimal chemical markers for heat release in syngas flames.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22DNS+study+of+the+optimal+chemical+markers+for+heat+release+in+syngas+flames%22" target="_blank" rel="noopener">Paper</a></p></article></div>
                   </details>
@@ -484,8 +524,14 @@
 
                 <article class="research-branch research-branch--with-papers" id="theme-chemistry-reduction">
                   <p class="research-branch__axis">Efficient chemical kinetics</p>
-                  <h4>Chemistry reduction</h4>
-                  <p>Accurate, low-stiffness kinetic mechanisms tailored for high-fidelity turbulent combustion simulations.</p>
+                  <div class="research-branch__heading research-branch__heading--method">
+                    <svg class="theme-icon" aria-hidden="true"><use href="#icon-chemistry-reduction"></use></svg>
+                    <span class="research-branch__icon-rule" aria-hidden="true"></span>
+                    <div class="research-branch__heading-text">
+                      <h4>Chemistry reduction</h4>
+                      <p>Accurate, low-stiffness kinetic mechanisms tailored for high-fidelity turbulent combustion simulations.</p>
+                    </div>
+                  </div>
                   <details class="theme-papers" aria-label="Chemistry reduction journal articles">
                     <summary class="theme-papers__summary">Journal articles <span>2</span></summary>
                     <div class="list__item"><article class="archive__item" data-paper-index="27"><p class="page__meta">2025</p><h5 class="archive__item-title">A reduced kinetic mechanism for ammonia/hydrogen mixtures with alleviated stiffness and high accuracy tailored for high-fidelity numerical simulations.</h5><p class="archive__item-excerpt"><em>Applications in Energy and Combustion Science</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22A+reduced+kinetic+mechanism+for+ammonia%2Fhydrogen+mixtures+with+alleviated+stiffness+and+high+accuracy+tailored+for+high-fidelity+numerical+simulations%22" target="_blank" rel="noopener">Paper</a></p></article></div>
@@ -507,7 +553,12 @@
                 spray systems, and low-carbon propulsion technologies.
               </p>
               <details class="theme-papers" aria-label="Sustainable energy and propulsion application journal articles">
-                <summary class="theme-papers__summary">Journal articles <span>3</span></summary>
+                <summary class="theme-papers__summary">Journal articles <span>8</span></summary>
+                <div class="list__item"><article class="archive__item" data-paper-index="26"><p class="page__meta">2026</p><h5 class="archive__item-title">Chemical reaction neural networks for semi-detailed kinetics including the influence of inorganics and secondary reactions during cellulose pyrolysis.</h5><p class="archive__item-excerpt"><em>Energy Conversion and Management</em>. <a class="paper-link" href="https://doi.org/10.1016/j.enconman.2025.120655" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="17"><p class="page__meta">2023</p><h5 class="archive__item-title">DNS study on reactivity stratification with prechamber H2/air turbulent jet flame to enhance NH3/air combustion in gas engines.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2023.128387" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="7"><p class="page__meta">2023</p><h5 class="archive__item-title">Direct numerical simulations of polypropylene gasification in supercritical water.</h5><p class="archive__item-excerpt"><em>Physics of Fluids</em>. <a class="paper-link" href="https://doi.org/10.1063/5.0155831" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="24"><p class="page__meta">2022</p><h5 class="archive__item-title">Transient ignition of premixed methane/air mixtures by a pre-chamber hot jet: A DNS study.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Transient+ignition+of+premixed+methane%2Fair+mixtures+by+a+pre-chamber+hot+jet%3A+A+DNS+study%22" target="_blank" rel="noopener">Paper</a></p></article></div>
+                <div class="list__item"><article class="archive__item" data-paper-index="8"><p class="page__meta">2022</p><h5 class="archive__item-title">Fully resolved direct numerical simulation of single coal particle gasification in supercritical water.</h5><p class="archive__item-excerpt"><em>Fuel</em>. <a class="paper-link" href="https://doi.org/10.1016/j.fuel.2022.125474" target="_blank" rel="noopener">Paper</a></p></article></div>
                 <div class="list__item"><article class="archive__item" data-paper-index="37"><p class="page__meta">2023</p><h5 class="archive__item-title">Direct numerical simulation of the transitional airflow in a patient-specific larynx during exhalation.</h5><p class="archive__item-excerpt"><em>Computers and Fluids</em>. <a class="paper-link" href="https://doi.org/10.1016/j.compfluid.2023.105819" target="_blank" rel="noopener">Paper</a></p></article></div>
                 <div class="list__item"><article class="archive__item" data-paper-index="14"><p class="page__meta">2021</p><h5 class="archive__item-title">Combustion mode and mixing characteristics of a reacting jet in crossflow.</h5><p class="archive__item-excerpt"><em>Energy &amp; Fuels</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Combustion+mode+and+mixing+characteristics+of+a+reacting+jet+in+crossflow%22" target="_blank" rel="noopener">Paper</a></p></article></div>
                 <div class="list__item"><article class="archive__item" data-paper-index="40"><p class="page__meta">2021</p><h5 class="archive__item-title">Direct numerical simulation of turbulent spray combustion in the SpraySyn burner: Impact of injector geometry.</h5><p class="archive__item-excerpt"><em>Flow, Turbulence and Combustion</em>. <a class="paper-link" href="https://scholar.google.com/scholar?q=%22Direct+numerical+simulation+of+turbulent+spray+combustion+in+the+SpraySyn+burner%3A+Impact+of+injector+geometry%22" target="_blank" rel="noopener">Paper</a></p></article></div>
