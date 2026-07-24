@@ -278,6 +278,19 @@ strong {
   font-weight: 600;
 }
 
+.research-introduction {
+  max-width: 780px;
+  margin: 0 0 30px;
+}
+
+.research-introduction .page__definition-link {
+  margin: 0 0 12px;
+}
+
+.research-introduction .page__lead {
+  margin-bottom: 0;
+}
+
 .definition-trigger {
   appearance: none;
   display: inline-flex;
