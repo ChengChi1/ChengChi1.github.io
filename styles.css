@@ -698,6 +698,42 @@ strong {
   font-style: italic;
 }
 
+.stratified-movies {
+  padding: 0;
+}
+
+.stratified-movies__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 8px;
+  min-width: 760px;
+  align-items: end;
+}
+
+.stratified-movies__item {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5px;
+  min-width: 0;
+  background: #fff;
+}
+
+.stratified-movies__item video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  background: #0f777a;
+}
+
+.stratified-movies__item span {
+  color: #27323a;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
 .research-branch__heading--method {
   margin-bottom: 0.2rem;
 }
