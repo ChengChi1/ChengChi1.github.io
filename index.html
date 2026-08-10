@@ -15,7 +15,7 @@
       content="AI-assisted reacting-flow research combining high-fidelity simulation, non-equilibrium physics, and interpretable scientific AI."
     />
     <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
-    <link rel="stylesheet" href="styles.css?v=56" />
+    <link rel="stylesheet" href="styles.css?v=57" />
     <script src="script.js?v=63" defer></script>
   </head>
   <body>
@@ -168,6 +168,9 @@
             <li id="workflow-step-1">
               <span class="research-workflow__number">1</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"></path><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"></path></svg>
+                </span>
                 <h2>First-principles data generation</h2>
                 <p>Perform high-fidelity DNS of canonical and lab-scale configurations to generate fully resolved datasets covering relevant multiscale reacting-flow processes.</p>
               </div>
@@ -175,6 +178,9 @@
             <li id="workflow-step-2">
               <span class="research-workflow__number">2</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M8 11h6M11 8v6"></path></svg>
+                </span>
                 <h2>Non-equilibrium physics discovery</h2>
                 <p>Identify the mechanisms, characteristic timescales, state variables, history dependence, and signatures responsible for chemical, thermal, and transport non-equilibrium.</p>
               </div>
@@ -182,6 +188,9 @@
             <li id="workflow-step-3">
               <span class="research-workflow__number">3</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><rect x="9" y="2" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="16" y="16" width="6" height="6" rx="1"></rect><path d="M12 8v4M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path></svg>
+                </span>
                 <h2>Physics-based non-Markovian manifold learning</h2>
                 <p>Use the DNS datasets and discovered physics to construct <strong>dynamic, history-aware low-dimensional manifolds</strong>, embedding conservation laws, thermochemical constraints, and appropriate memory variables.</p>
               </div>
@@ -189,6 +198,9 @@
             <li>
               <span class="research-workflow__number">4</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
+                </span>
                 <h2>Physics-preserving scale-up</h2>
                 <p>Incorporate the learned manifolds into affordable LES/RANS or other system-scale simulation frameworks for practical sustainable-energy and propulsion systems.</p>
               </div>
@@ -196,6 +208,9 @@
             <li>
               <span class="research-workflow__number">5</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M10 2v7.3L4.5 19a2 2 0 0 0 1.75 3h11.5a2 2 0 0 0 1.75-3L14 9.3V2"></path><path d="M8.5 2h7M6.5 18h11"></path></svg>
+                </span>
                 <h2>Experimental validation</h2>
                 <p>Validate the predicted integral performance and, importantly, <strong>non-equilibrium observables and transient responses</strong> against experiments across relevant operating conditions.</p>
               </div>
@@ -203,6 +218,9 @@
             <li class="research-workflow__diagnosis">
               <span class="research-workflow__number">6</span>
               <div class="research-workflow__content">
+                <span class="research-workflow__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M6 3v12"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                </span>
                 <h2>Discrepancy diagnosis and adaptive enrichment</h2>
                 <p>Identify where and why the model deviates from experiments. Determine whether the discrepancy results from <strong>missing multiscale physics, insufficient training coverage, inadequate memory representation, or scale-up and model-form assumptions</strong>. Then selectively generate new DNS cases and/or refine the physical representation and manifold before repeating the loop.</p>
                 <ul class="research-workflow__branches" aria-label="Corrective branches">
