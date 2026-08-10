@@ -15,7 +15,7 @@
       content="AI-assisted reacting-flow research combining high-fidelity simulation, non-equilibrium physics, and interpretable scientific AI."
     />
     <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
-    <link rel="stylesheet" href="styles.css?v=52" />
+    <link rel="stylesheet" href="styles.css?v=55" />
     <script src="script.js?v=62" defer></script>
   </head>
   <body>
@@ -163,24 +163,74 @@
       <article class="page archive">
         <header class="page__header">
           <p class="page__meta">Research profile</p>
-          <h1 class="page__title">AI-assisted reacting flows for sustainable energy and propulsion</h1>
-          <p class="page__lead">
-            My research develops AI-assisted approaches for reacting flows in sustainable energy and
-            propulsion. I combine high-fidelity Direct Numerical Simulations with physics-based AI to
-            (1) generate high-fidelity non-equilibrium reacting-flow datasets for large AI model
-            training; (2) identify causal mechanisms behind intermittent rare events; (3) learn dynamic
-            non-Markovian manifolds from multiscale reactive-flow dynamics; and (4) construct accurate,
-            interpretable, and transferable models for practical energy and propulsion systems.
-          </p>
-          <ul class="taxonomy__index" aria-label="Research keywords">
-            <li>sustainable energy</li>
-            <li>propulsion</li>
-            <li>direct numerical simulation</li>
-            <li>high-fidelity datasets</li>
-            <li>rare-event causality</li>
-            <li>physics-based AI</li>
-            <li>dynamic non-Markovian manifold</li>
-          </ul>
+          <h1 class="page__title">An intelligent solution to multi-scale reacting flows</h1>
+          <ol class="research-workflow" aria-label="Closed-loop research workflow">
+            <li id="workflow-step-1">
+              <span class="research-workflow__number">1</span>
+              <div class="research-workflow__content">
+                <h2>First-principles data generation</h2>
+                <p>Perform high-fidelity DNS of canonical and lab-scale configurations to generate fully resolved datasets covering relevant multiscale reacting-flow processes.</p>
+              </div>
+            </li>
+            <li id="workflow-step-2">
+              <span class="research-workflow__number">2</span>
+              <div class="research-workflow__content">
+                <h2>Non-equilibrium physics discovery</h2>
+                <p>Identify the mechanisms, characteristic timescales, state variables, history dependence, and signatures responsible for chemical, thermal, and transport non-equilibrium.</p>
+              </div>
+            </li>
+            <li id="workflow-step-3">
+              <span class="research-workflow__number">3</span>
+              <div class="research-workflow__content">
+                <h2>Physics-based non-Markovian manifold learning</h2>
+                <p>Use the DNS datasets and discovered physics to construct <strong>dynamic, history-aware low-dimensional manifolds</strong>, embedding conservation laws, thermochemical constraints, and appropriate memory variables.</p>
+              </div>
+            </li>
+            <li>
+              <span class="research-workflow__number">4</span>
+              <div class="research-workflow__content">
+                <h2>Physics-preserving scale-up</h2>
+                <p>Incorporate the learned manifolds into affordable LES/RANS or other system-scale simulation frameworks for practical sustainable-energy and propulsion systems.</p>
+              </div>
+            </li>
+            <li>
+              <span class="research-workflow__number">5</span>
+              <div class="research-workflow__content">
+                <h2>Experimental validation</h2>
+                <p>Validate the predicted integral performance and, importantly, <strong>non-equilibrium observables and transient responses</strong> against experiments across relevant operating conditions.</p>
+              </div>
+            </li>
+            <li class="research-workflow__diagnosis">
+              <span class="research-workflow__number">6</span>
+              <div class="research-workflow__content">
+                <h2>Discrepancy diagnosis and adaptive enrichment</h2>
+                <p>Identify where and why the model deviates from experiments. Determine whether the discrepancy results from <strong>missing multiscale physics, insufficient training coverage, inadequate memory representation, or scale-up and model-form assumptions</strong>. Then selectively generate new DNS cases and/or refine the physical representation and manifold before repeating the loop.</p>
+                <ul class="research-workflow__branches" aria-label="Corrective branches">
+                  <li>
+                    <strong>Missing physics / uncovered regime</strong>
+                    <a class="research-workflow__return" href="#workflow-step-1" aria-label="New targeted DNS; return to Step 1">
+                      <span class="research-workflow__return-action">New targeted DNS</span>
+                      <span class="research-workflow__return-target">Return to Step 1</span>
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Incorrect state or memory representation</strong>
+                    <a class="research-workflow__return" href="#workflow-step-2" aria-label="Revisit physics discovery; return to Step 2">
+                      <span class="research-workflow__return-action">Revisit physics discovery</span>
+                      <span class="research-workflow__return-target">Return to Step 2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Manifold / model deficiency</strong>
+                    <a class="research-workflow__return" href="#workflow-step-3" aria-label="Retrain or redesign the AI manifold; return to Step 3">
+                      <span class="research-workflow__return-action">Retrain or redesign the AI manifold</span>
+                      <span class="research-workflow__return-target">Return to Step 3</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
         </header>
 
         <section class="page__content profile-summary" id="experience" aria-labelledby="experience-title">
@@ -418,15 +468,15 @@
                   <figure class="research-branch__media research-branch__media--movies flammability-movies" aria-label="Ultra-lean flame evolution at three equivalence ratios">
                     <div class="flammability-movies__grid">
                       <div class="flammability-movies__item">
-                        <img src="assets-flammability-phi-010.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.1." loading="lazy" decoding="async" />
+                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-010.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.1." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.1</span>
                       </div>
                       <div class="flammability-movies__item">
-                        <img src="assets-flammability-phi-015.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.15." loading="lazy" decoding="async" />
+                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-015.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.15." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.15</span>
                       </div>
                       <div class="flammability-movies__item">
-                        <img src="assets-flammability-phi-020.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.2." loading="lazy" decoding="async" />
+                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-020.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.2." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.2</span>
                       </div>
                     </div>
