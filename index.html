@@ -15,8 +15,8 @@
       content="AI-assisted reacting-flow research combining high-fidelity simulation, non-equilibrium physics, and interpretable scientific AI."
     />
     <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
-    <link rel="stylesheet" href="styles.css?v=55" />
-    <script src="script.js?v=62" defer></script>
+    <link rel="stylesheet" href="styles.css?v=56" />
+    <script src="script.js?v=63" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -206,21 +206,21 @@
                 <h2>Discrepancy diagnosis and adaptive enrichment</h2>
                 <p>Identify where and why the model deviates from experiments. Determine whether the discrepancy results from <strong>missing multiscale physics, insufficient training coverage, inadequate memory representation, or scale-up and model-form assumptions</strong>. Then selectively generate new DNS cases and/or refine the physical representation and manifold before repeating the loop.</p>
                 <ul class="research-workflow__branches" aria-label="Corrective branches">
-                  <li>
+                  <li data-loop-return="workflow-step-1">
                     <strong>Missing physics / uncovered regime</strong>
                     <a class="research-workflow__return" href="#workflow-step-1" aria-label="New targeted DNS; return to Step 1">
                       <span class="research-workflow__return-action">New targeted DNS</span>
                       <span class="research-workflow__return-target">Return to Step 1</span>
                     </a>
                   </li>
-                  <li>
+                  <li data-loop-return="workflow-step-2">
                     <strong>Incorrect state or memory representation</strong>
                     <a class="research-workflow__return" href="#workflow-step-2" aria-label="Revisit physics discovery; return to Step 2">
                       <span class="research-workflow__return-action">Revisit physics discovery</span>
                       <span class="research-workflow__return-target">Return to Step 2</span>
                     </a>
                   </li>
-                  <li>
+                  <li data-loop-return="workflow-step-3">
                     <strong>Manifold / model deficiency</strong>
                     <a class="research-workflow__return" href="#workflow-step-3" aria-label="Retrain or redesign the AI manifold; return to Step 3">
                       <span class="research-workflow__return-action">Retrain or redesign the AI manifold</span>

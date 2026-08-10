@@ -56,12 +56,117 @@ if (definitionTrigger && definitionPanel) {
   });
 }
 
+function initializeResearchWorkflowLoop() {
+  const workflow = document.querySelector(".research-workflow");
+  const branches = workflow
+    ? Array.from(workflow.querySelectorAll("[data-loop-return]"))
+    : [];
+
+  if (!workflow || !branches.length) {
+    return;
+  }
+
+  const svgNamespace = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNamespace, "svg");
+  const definitions = document.createElementNS(svgNamespace, "defs");
+  const marker = document.createElementNS(svgNamespace, "marker");
+  const markerArrow = document.createElementNS(svgNamespace, "path");
+  const paths = branches.map(() => document.createElementNS(svgNamespace, "path"));
+
+  svg.classList.add("research-workflow__loop");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("focusable", "false");
+
+  marker.id = "research-workflow-loop-arrow";
+  marker.setAttribute("viewBox", "0 0 8 8");
+  marker.setAttribute("refX", "7");
+  marker.setAttribute("refY", "4");
+  marker.setAttribute("markerWidth", "7");
+  marker.setAttribute("markerHeight", "7");
+  marker.setAttribute("orient", "auto");
+  markerArrow.setAttribute("d", "M0 0 L8 4 L0 8 Z");
+  markerArrow.setAttribute("fill", "#2b7fa3");
+  marker.append(markerArrow);
+  definitions.append(marker);
+  svg.append(definitions);
+
+  paths.forEach((path) => {
+    path.classList.add("research-workflow__loop-path");
+    path.setAttribute("marker-end", "url(#research-workflow-loop-arrow)");
+    svg.append(path);
+  });
+
+  workflow.prepend(svg);
+
+  function drawLoop() {
+    const workflowRect = workflow.getBoundingClientRect();
+    const width = Math.max(1, Math.round(workflowRect.width));
+    const height = Math.max(1, Math.round(workflowRect.height));
+    const compact = width < 560;
+    const laneGap = compact ? 6 : 10;
+    const outerInset = compact ? 5 : 8;
+
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svg.setAttribute("width", String(width));
+    svg.setAttribute("height", String(height));
+
+    branches.forEach((branch, index) => {
+      const target = document.getElementById(branch.dataset.loopReturn);
+      const returnLink = branch.querySelector(".research-workflow__return");
+      const targetContent = target?.querySelector(".research-workflow__content");
+      const targetNumber = target?.querySelector(".research-workflow__number");
+
+      if (!returnLink || !targetContent || !targetNumber) {
+        paths[index].setAttribute("d", "");
+        return;
+      }
+
+      const linkRect = returnLink.getBoundingClientRect();
+      const contentRect = targetContent.getBoundingClientRect();
+      const numberRect = targetNumber.getBoundingClientRect();
+      const startX = linkRect.right - workflowRect.left + 5;
+      const startY = linkRect.top - workflowRect.top + linkRect.height / 2;
+      const targetX = contentRect.right - workflowRect.left + 1;
+      const targetY = numberRect.top - workflowRect.top + numberRect.height / 2;
+      const laneX = width - outerInset - index * laneGap;
+      const turnRadius = compact ? 5 : 7;
+      const pathData = [
+        `M ${startX.toFixed(1)} ${startY.toFixed(1)}`,
+        `H ${(laneX - turnRadius).toFixed(1)}`,
+        `Q ${laneX.toFixed(1)} ${startY.toFixed(1)} ${laneX.toFixed(1)} ${(startY - turnRadius).toFixed(1)}`,
+        `V ${(targetY + turnRadius).toFixed(1)}`,
+        `Q ${laneX.toFixed(1)} ${targetY.toFixed(1)} ${(laneX - turnRadius).toFixed(1)} ${targetY.toFixed(1)}`,
+        `H ${targetX.toFixed(1)}`,
+      ].join(" ");
+
+      paths[index].setAttribute("d", pathData);
+    });
+  }
+
+  let animationFrame = 0;
+  const scheduleDraw = () => {
+    window.cancelAnimationFrame(animationFrame);
+    animationFrame = window.requestAnimationFrame(drawLoop);
+  };
+
+  if ("ResizeObserver" in window) {
+    const observer = new ResizeObserver(scheduleDraw);
+    observer.observe(workflow);
+  }
+
+  window.addEventListener("resize", scheduleDraw, { passive: true });
+  window.addEventListener("load", scheduleDraw, { once: true });
+  scheduleDraw();
+}
+
+initializeResearchWorkflowLoop();
+
 const publicationItems = document.querySelectorAll(".theme-papers .archive__item");
 const paperFigureAssetVersion = "paper-figure-differential-diffusion-hoq-20260706";
 const paperFigureSources = Array.from(
   { length: 42 },
   (_, index) =>
-    `assets-paper-figures-paper-${String(index + 1).padStart(2, "0")}.jpg?v=${paperFigureAssetVersion}`,
+    `assets/paper-figures/paper-${String(index + 1).padStart(2, "0")}.jpg?v=${paperFigureAssetVersion}`,
 );
 
 const publicationAuthors = [
