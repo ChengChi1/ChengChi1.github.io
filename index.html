@@ -14,9 +14,9 @@
       property="og:description"
       content="AI-assisted reacting-flow research combining high-fidelity simulation, non-equilibrium physics, and interpretable scientific AI."
     />
-    <meta property="og:image" content="assets-profile-cheng-avatar-eye23.jpg" />
-    <link rel="stylesheet" href="styles.css?v=58" />
-    <script src="script.js?v=64" defer></script>
+    <meta property="og:image" content="assets/profile-cheng-avatar-eye23.jpg" />
+    <link rel="stylesheet" href="styles.css?v=59" />
+    <script src="script.js?v=65" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -139,7 +139,7 @@
     <main class="page-layout" id="main">
       <aside class="sidebar sticky" id="top" aria-label="Author profile">
         <div class="author__avatar">
-          <img src="assets-profile-cheng-avatar-eye23.jpg" alt="Portrait of Dr.-Ing. Cheng Chi" />
+          <img src="assets/profile-cheng-avatar-eye23.jpg" alt="Portrait of Dr.-Ing. Cheng Chi" />
         </div>
 
         <div class="author__content">
@@ -153,7 +153,7 @@
         <ul class="author__urls">
           <li><strong>Affiliation</strong><span>Otto von Guericke University Magdeburg</span></li>
           <li><a href="mailto:cheng.chi@ovgu.de">cheng.chi@ovgu.de</a></li>
-          <li><a href="assets-Cheng-Chi-CV.pdf">Download CV</a></li>
+          <li><a href="assets/Cheng-Chi-CV.pdf">Download CV</a></li>
           <li><a href="https://scholar.google.com/citations?hl=en&amp;user=B3WmPUEAAAAJ">Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0002-8512-8876">ORCID</a></li>
           <li><a href="https://www.researchgate.net/profile/Cheng-Chi-20">ResearchGate</a></li>
@@ -163,7 +163,33 @@
       <article class="page archive">
         <header class="page__header">
           <p class="page__meta">Research profile</p>
-          <h1 class="page__title">An intelligent solution to multi-scale reacting flows</h1>
+          <h1 class="page__title">
+            An intelligent solution to
+            <button
+              class="definition-trigger definition-trigger--title"
+              type="button"
+              aria-expanded="false"
+              aria-controls="multiscale-definition"
+              data-definition-trigger
+            >
+              multi-scale reacting flows
+            </button>
+          </h1>
+          <div
+            class="definition-popover definition-popover--profile"
+            id="multiscale-definition"
+            role="note"
+            data-definition-panel
+            hidden
+          >
+            <p>
+              Reactive flow constitutes the physical foundation for
+              <strong class="definition-highlight">sustainable energy and propulsion</strong>.
+              Its multiscale nature introduces non-equilibrium processes that generate intermittent rare
+              events, including extinction, reignition, abnormal pollutant emissions, extreme curvature,
+              strain, and burning rates, making prediction and modeling especially challenging.
+            </p>
+          </div>
           <ol class="research-workflow" aria-label="Closed-loop research workflow">
             <li id="workflow-step-1">
               <span class="research-workflow__number">1</span>
@@ -181,8 +207,37 @@
                 <span class="research-workflow__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path><path d="M8 11h6M11 8v6"></path></svg>
                 </span>
-                <h2>Non-equilibrium physics discovery</h2>
+                <h2>
+                  <button
+                    class="definition-trigger definition-trigger--workflow"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nonequilibrium-definition"
+                    data-definition-trigger
+                  >
+                    Non-equilibrium physics discovery
+                  </button>
+                </h2>
                 <p>Identify the mechanisms, characteristic timescales, state variables, history dependence, and signatures responsible for chemical, thermal, and transport non-equilibrium.</p>
+                <div
+                  class="definition-popover definition-popover--workflow"
+                  id="nonequilibrium-definition"
+                  role="note"
+                  data-definition-panel
+                  hidden
+                >
+                  <p>
+                    <strong>Non-equilibrium reacting flows:</strong> the fast-reaction (chemical-equilibrium)
+                    assumption fails when the timescale of another physical process, such as convection or
+                    diffusion, becomes comparable to or smaller than the flame timescale.
+                  </p>
+                  <figure class="definition-figure">
+                    <img
+                      src="assets/nonequilibrium-explanation.png"
+                      alt="Conceptual diagram showing turbulence, wall heat loss, pressure waves, spray mixing, flame state, chemical response, equilibrium manifold, non-equilibrium state, and forcing versus chemical timescales."
+                    />
+                  </figure>
+                </div>
               </div>
             </li>
             <li id="workflow-step-3">
@@ -324,39 +379,6 @@
                 </h3>
               </div>
 
-              <div class="research-introduction" aria-label="Introduction to non-equilibrium reacting flows">
-                <p class="page__definition-link">
-                  <button
-                    class="definition-trigger"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="nonequilibrium-definition"
-                    data-definition-trigger
-                  >
-                    Non-equilibrium reacting flows
-                  </button>
-                </p>
-                <div class="definition-popover" id="nonequilibrium-definition" role="note" data-definition-panel hidden>
-                  <p>
-                    <strong>Non-equilibrium:</strong> fast reaction (chemical equilibrium) assumption fails
-                    when the timescale of other physical process (e.g. convection, diffusion ...) becomes
-                    comparable to or even smaller than the flame timescale.
-                  </p>
-                  <figure class="definition-figure">
-                    <img
-                      src="assets-nonequilibrium-explanation.png"
-                      alt="Conceptual diagram showing turbulence, wall heat loss, pressure waves, spray mixing, flame state, chemical response, equilibrium manifold, non-equilibrium state, and forcing versus chemical timescales."
-                    />
-                  </figure>
-                </div>
-                <p class="page__lead">
-                  Reactive flow constitutes the physical foundation for sustainable energy and propulsion.
-                  Its multiscale nature introduces non-equilibrium processes that generate intermittent rare
-                  events, including extinction, reignition, abnormal pollutant emissions, extreme curvature,
-                  strain, and burning rates, making prediction and modeling especially challenging.
-                </p>
-              </div>
-
               <div class="research-branches research-branches--papers" id="theme-publications" aria-label="Non-equilibrium process categories with journal articles">
                 <article class="research-branch research-branch--with-papers" id="theme-wall-flame">
                   <p class="research-branch__axis">Wall-induced</p>
@@ -370,7 +392,7 @@
                   </div>
                   <figure class="research-branch__media">
                     <img
-                      src="assets-reactchannel-flame-wall.webp"
+                      src="assets/reactchannel-flame-wall.webp"
                       alt="Animated simulation of a turbulent reacting channel flame interacting with walls."
                       loading="lazy"
                       decoding="async"
@@ -401,19 +423,19 @@
                   <figure class="research-branch__media research-branch__media--movies high-ka-movies" aria-label="High- and low-Karlovitz flame evolution at different Reynolds numbers">
                     <div class="high-ka-movies__grid">
                       <div class="high-ka-movies__item high-ka-movies__item--high-high">
-                        <img src="assets-high-ka-movies-highka-highre.webp?v=compact-20260707" alt="High-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <img src="assets/high-ka-movies/highka-highre.webp?v=compact-20260707" alt="High-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
                         <span>High Ka / High Re</span>
                       </div>
                       <div class="high-ka-movies__item high-ka-movies__item--high-low">
-                        <img src="assets-high-ka-movies-highka-lowre.webp?v=compact-20260707" alt="High-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <img src="assets/high-ka-movies/highka-lowre.webp?v=compact-20260707" alt="High-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
                         <span>High Ka / Low Re</span>
                       </div>
                       <div class="high-ka-movies__item high-ka-movies__item--low-high">
-                        <img src="assets-high-ka-movies-lowka-highre.webp?v=compact-20260707" alt="Low-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <img src="assets/high-ka-movies/lowka-highre.webp?v=compact-20260707" alt="Low-Karlovitz, high-Reynolds-number flame evolution." loading="lazy" decoding="async" />
                         <span>Low Ka / High Re</span>
                       </div>
                       <div class="high-ka-movies__item high-ka-movies__item--low-low">
-                        <img src="assets-high-ka-movies-lowka-lowre.webp?v=compact-20260707" alt="Low-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
+                        <img src="assets/high-ka-movies/lowka-lowre.webp?v=compact-20260707" alt="Low-Karlovitz, low-Reynolds-number flame evolution." loading="lazy" decoding="async" />
                         <span>Low Ka / Low Re</span>
                       </div>
                     </div>
@@ -443,23 +465,23 @@
                   <figure class="research-branch__media research-branch__media--movies stratified-movies" aria-label="Evolution of five stratified-flame cases">
                     <div class="stratified-movies__grid">
                       <div class="stratified-movies__item">
-                        <video src="assets-stratified-case-a.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case A"></video>
+                        <video src="assets/stratified-movies/case-a.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case A"></video>
                         <span>Case A</span>
                       </div>
                       <div class="stratified-movies__item">
-                        <video src="assets-stratified-case-b.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case B"></video>
+                        <video src="assets/stratified-movies/case-b.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case B"></video>
                         <span>Case B</span>
                       </div>
                       <div class="stratified-movies__item">
-                        <video src="assets-stratified-case-c.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case C"></video>
+                        <video src="assets/stratified-movies/case-c.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case C"></video>
                         <span>Case C</span>
                       </div>
                       <div class="stratified-movies__item">
-                        <video src="assets-stratified-case-d.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case D"></video>
+                        <video src="assets/stratified-movies/case-d.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case D"></video>
                         <span>Case D</span>
                       </div>
                       <div class="stratified-movies__item">
-                        <video src="assets-stratified-case-e.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case E"></video>
+                        <video src="assets/stratified-movies/case-e.mp4?v=20260726" autoplay muted loop playsinline preload="metadata" aria-label="Stratified flame Case E"></video>
                         <span>Case E</span>
                       </div>
                     </div>
@@ -486,15 +508,15 @@
                   <figure class="research-branch__media research-branch__media--movies flammability-movies" aria-label="Ultra-lean flame evolution at three equivalence ratios">
                     <div class="flammability-movies__grid">
                       <div class="flammability-movies__item">
-                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-010.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.1." loading="lazy" decoding="async" /></div>
+                        <div class="flammability-movies__frame"><img src="assets/flammability-phi-010.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.1." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.1</span>
                       </div>
                       <div class="flammability-movies__item">
-                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-015.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.15." loading="lazy" decoding="async" /></div>
+                        <div class="flammability-movies__frame"><img src="assets/flammability-phi-015.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.15." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.15</span>
                       </div>
                       <div class="flammability-movies__item">
-                        <div class="flammability-movies__frame"><img src="assets-flammability-phi-020.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.2." loading="lazy" decoding="async" /></div>
+                        <div class="flammability-movies__frame"><img src="assets/flammability-phi-020.webp?v=lossless-20260725" alt="Ultra-lean flame evolution at an equivalence ratio of 0.2." loading="lazy" decoding="async" /></div>
                         <span><var>&phi;</var> = 0.2</span>
                       </div>
                     </div>
@@ -517,7 +539,7 @@
                   </div>
                   <figure class="research-branch__media research-branch__media--compact">
                     <img
-                      src="assets-interphase-heat-mass-transfer.webp"
+                      src="assets/interphase-heat-mass-transfer.webp"
                       alt="Animated simulation of interphase heat and mass transfer around reacting particles."
                       loading="lazy"
                       decoding="async"
@@ -544,7 +566,7 @@
                   </div>
                   <figure class="research-branch__media research-branch__media--compact">
                     <img
-                      src="assets-porous-matrix-reacting-transport.webp"
+                      src="assets/porous-matrix-reacting-transport.webp"
                       alt="Animated simulation of reacting transport through a porous matrix."
                       loading="lazy"
                       decoding="async"

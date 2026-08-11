@@ -315,6 +315,21 @@ strong {
   outline: none;
 }
 
+.definition-trigger--title {
+  display: inline;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.definition-trigger--workflow {
+  color: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  text-align: left;
+}
+
 .definition-popover {
   max-width: 780px;
   margin: -2px 0 18px;
@@ -330,6 +345,25 @@ strong {
 
 .definition-popover p {
   margin-bottom: 0.75rem;
+}
+
+.definition-popover p:last-child {
+  margin-bottom: 0;
+}
+
+.definition-popover--profile {
+  max-width: 900px;
+  margin: 0.75rem 0 1.25rem;
+  color: #3f474d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.definition-highlight {
+  border-radius: 2px;
+  padding: 0 0.18em;
+  color: #493900;
+  background: #ffec9f;
 }
 
 .definition-figure {
@@ -543,6 +577,20 @@ strong {
   color: #48535a;
   font-size: 0.9rem;
   line-height: 1.48;
+}
+
+.research-workflow .definition-popover--workflow {
+  grid-column: 1 / -1;
+  max-width: none;
+  margin: 0.72rem 0 0.05rem;
+  color: #48535a;
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+.research-workflow .definition-popover--workflow p {
+  max-width: none;
+  margin-bottom: 0.7rem;
 }
 
 .research-workflow__diagnosis .research-workflow__content {

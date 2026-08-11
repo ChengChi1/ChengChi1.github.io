@@ -18,40 +18,69 @@ if (header && nav && navToggle) {
   });
 }
 
-const definitionTrigger = document.querySelector("[data-definition-trigger]");
-const definitionPanel = document.querySelector("[data-definition-panel]");
+const definitionTriggers = Array.from(
+  document.querySelectorAll("[data-definition-trigger]"),
+);
 
-function setDefinitionOpen(isOpen) {
-  if (!definitionTrigger || !definitionPanel) {
+function getDefinitionPanel(trigger) {
+  const panelId = trigger.getAttribute("aria-controls");
+  return panelId ? document.getElementById(panelId) : null;
+}
+
+function setDefinitionOpen(trigger, isOpen) {
+  const panel = getDefinitionPanel(trigger);
+
+  if (!panel) {
     return;
   }
 
-  definitionPanel.hidden = !isOpen;
-  definitionTrigger.classList.toggle("is-open", isOpen);
-  definitionTrigger.setAttribute("aria-expanded", String(isOpen));
+  panel.hidden = !isOpen;
+  trigger.classList.toggle("is-open", isOpen);
+  trigger.setAttribute("aria-expanded", String(isOpen));
 }
 
-if (definitionTrigger && definitionPanel) {
-  definitionTrigger.addEventListener("click", () => {
-    setDefinitionOpen(definitionPanel.hidden);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (
-      definitionPanel.hidden ||
-      definitionTrigger.contains(event.target) ||
-      definitionPanel.contains(event.target)
-    ) {
-      return;
+function closeDefinitions(exceptTrigger = null) {
+  definitionTriggers.forEach((trigger) => {
+    if (trigger !== exceptTrigger) {
+      setDefinitionOpen(trigger, false);
     }
+  });
+}
 
-    setDefinitionOpen(false);
+definitionTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const panel = getDefinitionPanel(trigger);
+    const willOpen = panel?.hidden ?? false;
+
+    closeDefinitions(trigger);
+    setDefinitionOpen(trigger, willOpen);
+  });
+});
+
+if (definitionTriggers.length) {
+  document.addEventListener("click", (event) => {
+    const clickedDefinition = definitionTriggers.some((trigger) => {
+      const panel = getDefinitionPanel(trigger);
+      return trigger.contains(event.target) || panel?.contains(event.target);
+    });
+
+    if (!clickedDefinition) {
+      closeDefinitions();
+    }
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !definitionPanel.hidden) {
-      setDefinitionOpen(false);
-      definitionTrigger.focus();
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    const openTrigger = definitionTriggers.find(
+      (trigger) => trigger.getAttribute("aria-expanded") === "true",
+    );
+
+    if (openTrigger) {
+      setDefinitionOpen(openTrigger, false);
+      openTrigger.focus();
     }
   });
 }
