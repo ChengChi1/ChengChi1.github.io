@@ -921,6 +921,32 @@ strong {
   height: auto;
 }
 
+.research-branch__resource {
+  margin: 0.72rem 0 0;
+}
+
+.research-branch__resource a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--global-link-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.research-branch__resource a::after {
+  content: "\2197";
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+.research-branch__resource a:hover,
+.research-branch__resource a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
 .research-branch__media--compact {
   width: min(360px, 100%);
 }
