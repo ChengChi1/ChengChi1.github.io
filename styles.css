@@ -1007,6 +1007,14 @@ strong {
   display: none;
 }
 
+.research-island--axis-title .research-island__content > .research-branch__axis {
+  display: none;
+}
+
+.research-island--axis-title .research-island__content .research-branch__heading-text h4 {
+  display: block;
+}
+
 .research-branch:first-child {
   border-top: 0;
   padding-top: 0;

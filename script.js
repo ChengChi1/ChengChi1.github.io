@@ -243,6 +243,8 @@ function initializeResearchIslands() {
 
     branches.forEach((branch) => {
       const title = branch.querySelector(".research-branch__heading h4");
+      const categoryTitle = branch.querySelector(":scope > .research-branch__axis");
+      const usesCategoryTitle = branchGroup.id === "theme-publications" && categoryTitle;
 
       if (!title) {
         return;
@@ -258,10 +260,15 @@ function initializeResearchIslands() {
         ?.cloneNode(true);
 
       island.className = `${branch.className} research-island`;
+      if (usesCategoryTitle) {
+        island.classList.add("research-island--axis-title");
+      }
       island.id = branch.id;
       summary.className = "research-island__summary";
       summaryTitle.className = "research-island__title";
-      summaryTitle.textContent = title.textContent.trim();
+      summaryTitle.textContent = usesCategoryTitle
+        ? categoryTitle.textContent.trim()
+        : title.textContent.trim();
       toggle.className = "research-island__toggle";
       toggle.setAttribute("aria-hidden", "true");
       content.className = "research-island__content";
