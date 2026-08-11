@@ -96,7 +96,7 @@ function initializeResearchWorkflowLoop() {
   }
 
   const svgNamespace = "http://www.w3.org/2000/svg";
-  const loopColors = ["#2b7fa3", "#23806d", "#76578f"];
+  const loopColors = ["#2b7fa3", "#23806d", "#76578f", "#a96624"];
   const svg = document.createElementNS(svgNamespace, "svg");
   const definitions = document.createElementNS(svgNamespace, "defs");
   const paths = branches.map(() => document.createElementNS(svgNamespace, "path"));
