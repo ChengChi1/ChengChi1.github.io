@@ -234,7 +234,7 @@ function initializeResearchWorkflowLoop() {
 initializeResearchWorkflowLoop();
 
 const publicationItems = document.querySelectorAll(".theme-papers .archive__item");
-const paperFigureAssetVersion = "paper-figure-differential-diffusion-hoq-20260706";
+const paperFigureAssetVersion = "restored-20260811";
 const paperFigureSources = Array.from(
   { length: 42 },
   (_, index) =>
