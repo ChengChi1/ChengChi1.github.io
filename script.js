@@ -233,6 +233,89 @@ function initializeResearchWorkflowLoop() {
 
 initializeResearchWorkflowLoop();
 
+function initializeResearchIslands() {
+  const branchGroups = document.querySelectorAll(".research-branches");
+
+  branchGroups.forEach((branchGroup) => {
+    const branches = Array.from(
+      branchGroup.querySelectorAll(":scope > .research-branch"),
+    );
+
+    branches.forEach((branch) => {
+      const title = branch.querySelector(".research-branch__heading h4");
+
+      if (!title) {
+        return;
+      }
+
+      const island = document.createElement("details");
+      const summary = document.createElement("summary");
+      const summaryTitle = document.createElement("span");
+      const toggle = document.createElement("span");
+      const content = document.createElement("div");
+      const icon = branch
+        .querySelector(".research-branch__heading .theme-icon")
+        ?.cloneNode(true);
+
+      island.className = `${branch.className} research-island`;
+      island.id = branch.id;
+      summary.className = "research-island__summary";
+      summaryTitle.className = "research-island__title";
+      summaryTitle.textContent = title.textContent.trim();
+      toggle.className = "research-island__toggle";
+      toggle.setAttribute("aria-hidden", "true");
+      content.className = "research-island__content";
+
+      if (icon) {
+        summary.append(icon);
+      }
+
+      summary.append(summaryTitle, toggle);
+
+      while (branch.firstChild) {
+        content.append(branch.firstChild);
+      }
+
+      island.append(summary, content);
+      branch.replaceWith(island);
+      island.querySelectorAll("video").forEach((video) => video.pause());
+
+      island.addEventListener("toggle", () => {
+        if (!island.open) {
+          island.querySelectorAll("video").forEach((video) => video.pause());
+          return;
+        }
+
+        branchGroup
+          .querySelectorAll(":scope > .research-island[open]")
+          .forEach((peer) => {
+            if (peer !== island) {
+              peer.open = false;
+            }
+          });
+
+        island.querySelectorAll("video").forEach((video) => {
+          video.play().catch(() => {});
+        });
+      });
+    });
+  });
+
+  function openIslandFromHash() {
+    const hash = window.location.hash.slice(1);
+    const target = hash ? document.getElementById(hash) : null;
+
+    if (target?.classList.contains("research-island")) {
+      target.open = true;
+    }
+  }
+
+  window.addEventListener("hashchange", openIslandFromHash);
+  openIslandFromHash();
+}
+
+initializeResearchIslands();
+
 const publicationItems = document.querySelectorAll(".theme-papers .archive__item");
 const paperFigureAssetVersion = "restored-20260811";
 const paperFigureSources = Array.from(
