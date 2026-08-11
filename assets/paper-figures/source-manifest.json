@@ -1,0 +1,297 @@
+[
+  {
+    "index": 1,
+    "file": "assets/paper-figures/paper-01.jpg",
+    "source": "/Users/chic/Desktop/flame_thicken/channel_flame_Chi.jpg",
+    "label": "Turbulent flame-wall interaction",
+    "status": "ok"
+  },
+  {
+    "index": 2,
+    "file": "assets/paper-figures/paper-02.jpg",
+    "source": "/Users/chic/Desktop/PROCI25/aspacc2025/PROCI_ChongpengChen_FWI/3-PCI2025_FWI/Fig_hrrZv_mean.pdf",
+    "label": "Flame marker during flame-wall interaction",
+    "status": "ok"
+  },
+  {
+    "index": 3,
+    "file": "assets/paper-figures/paper-03.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-a6bdd31b-eaf8-479f-9f9d-a79ad85a5603.png",
+    "label": "Stagnation-wall flame / NO emission",
+    "status": "ok"
+  },
+  {
+    "index": 4,
+    "file": "assets/paper-figures/paper-04.jpg",
+    "source": "/Users/chic/Desktop/PROCI24/CNF_emission/revision/fig/Picture2.png",
+    "label": "Emission in turbulent boundary-layer FWI",
+    "status": "ok"
+  },
+  {
+    "index": 5,
+    "file": "assets/paper-figures/paper-05.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-23c7e3bd-9e0e-423e-9e6e-0f2b712738e7.png",
+    "label": "Differential diffusion in head-on quenching",
+    "status": "ok"
+  },
+  {
+    "index": 6,
+    "file": "assets/paper-figures/paper-06.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-716f0d24-f258-4210-b6ca-5c1fc630324e.png",
+    "label": "Laminar head-on quenching",
+    "status": "ok"
+  },
+  {
+    "index": 7,
+    "file": "assets/paper-figures/paper-07.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-0fcd96c8-3033-4c8c-9da6-7bf123125ae2.png",
+    "label": "Polypropylene gasification in supercritical water",
+    "status": "ok"
+  },
+  {
+    "index": 8,
+    "file": "assets/paper-figures/paper-08.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-760dd550-35a6-43d5-95e2-afef09422a46.png",
+    "label": "Single coal particle gasification",
+    "status": "ok"
+  },
+  {
+    "index": 9,
+    "file": "assets/paper-figures/paper-09.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-52862404-cdb0-4fae-a6c8-fa982f5df49e.png",
+    "label": "Interphase transfer in coal gasification",
+    "status": "ok"
+  },
+  {
+    "index": 10,
+    "file": "assets/paper-figures/paper-10.jpg",
+    "source": "/Users/chic/Desktop/scwg/memory/Particuology/graphic_abstract.png",
+    "label": "Generalized memory effect",
+    "status": "ok"
+  },
+  {
+    "index": 11,
+    "file": "assets/paper-figures/paper-11.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-9ef3bafb-e1f2-4ce8-bc4d-a741df1087c5.png",
+    "label": "Bluff-body stabilized turbulent premixed flame",
+    "status": "ok"
+  },
+  {
+    "index": 12,
+    "file": "assets/paper-figures/paper-12.jpg",
+    "source": "/Users/chic/Desktop/react_channel/EJMFB/vortex.png",
+    "label": "Turbulent flame and VLSM interaction",
+    "status": "ok"
+  },
+  {
+    "index": 13,
+    "file": "assets/paper-figures/paper-13.jpg",
+    "source": "/Users/chic/Desktop/channel/Picture1.png",
+    "label": "mPOD identification of VLSM",
+    "status": "ok"
+  },
+  {
+    "index": 14,
+    "file": "assets/paper-figures/paper-14.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-536ba386-ec35-4370-bc7c-710726f6e608.png",
+    "label": "Reacting jet in crossflow",
+    "status": "ok"
+  },
+  {
+    "index": 15,
+    "file": "assets/paper-figures/paper-15.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-e17a935d-4863-4697-bf6f-e51f077bf318.png",
+    "label": "Reactivity stratified ammonia combustion",
+    "status": "ok"
+  },
+  {
+    "index": 16,
+    "file": "assets/paper-figures/paper-16.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-265fa8a9-a817-4fb4-b3bd-aa762b6e811d.png",
+    "label": "Reactivity stratification with hydrogen addition",
+    "status": "ok"
+  },
+  {
+    "index": 17,
+    "file": "assets/paper-figures/paper-17.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-3bfbff4c-d5ef-430e-b0e7-cca0c486c756.png",
+    "label": "Prechamber stratified NH3/air combustion",
+    "status": "ok"
+  },
+  {
+    "index": 18,
+    "file": "assets/paper-figures/paper-18.jpg",
+    "source": "/Users/chic/Desktop/PROCI22/NH3_proci/fig/setup.png",
+    "label": "Molecular diffusion modeling in NH3/H2/air flames",
+    "status": "ok"
+  },
+  {
+    "index": 19,
+    "file": "assets/paper-figures/paper-19.jpg",
+    "source": "/Users/chic/Desktop/lowP/2025_Local_extinction/fig/Picture11.png",
+    "label": "Local extinction under sub-atmospheric pressure",
+    "status": "ok"
+  },
+  {
+    "index": 20,
+    "file": "assets/paper-figures/paper-20.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-7401375b-a1e2-44f1-ad22-1207ab97fee1.png",
+    "label": "Ultra-lean diffusion-controlled 2D hydrogen flame",
+    "status": "ok"
+  },
+  {
+    "index": 21,
+    "file": "assets/paper-figures/paper-21.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-d90d3b82-91e8-414f-8a70-9b3db4874f73.png",
+    "label": "Cryogenic-temperature turbulent premixed hydrogen flame",
+    "status": "ok"
+  },
+  {
+    "index": 22,
+    "file": "assets/paper-figures/paper-22.jpg",
+    "source": "/Users/chic/Desktop/PROCI24/PROCI-D-23-01352.pdf",
+    "label": "Turbulent premixed cool flames",
+    "status": "ok-page-crop",
+    "source_page": 8
+  },
+  {
+    "index": 23,
+    "file": "assets/paper-figures/paper-23.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-3ed6f548-32b5-4711-bece-fedff2c0b5d3.png",
+    "label": "Temperature effect on turbulent burning velocity",
+    "status": "ok"
+  },
+  {
+    "index": 24,
+    "file": "assets/paper-figures/paper-24.jpg",
+    "source": "/Users/chic/Desktop/PROCI_chamber/fig/3d2.png",
+    "label": "Transient ignition by pre-chamber hot jet",
+    "status": "ok"
+  },
+  {
+    "index": 25,
+    "file": "assets/paper-figures/paper-25.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-fceb69cd-2061-4b10-aa72-5e30530a18bb.png",
+    "label": "Hotspot-induced ignition",
+    "status": "ok"
+  },
+  {
+    "index": 26,
+    "file": "assets/paper-figures/paper-26.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-849bfa46-dad2-4147-9670-f08459154c62.png",
+    "label": "Chemical reaction neural networks for cellulose pyrolysis",
+    "status": "ok"
+  },
+  {
+    "index": 27,
+    "file": "assets/paper-figures/paper-27.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-b748b0c4-5808-420e-975f-59d74baeb46f.png",
+    "label": "Reduced kinetic mechanism for ammonia/hydrogen",
+    "status": "ok"
+  },
+  {
+    "index": 28,
+    "file": "assets/paper-figures/paper-28.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-7a78ea39-6aab-4ff1-85c5-27ea3e344814.png",
+    "label": "Reduced kinetic model for ammonia/DME flames",
+    "status": "ok"
+  },
+  {
+    "index": 29,
+    "file": "assets/paper-figures/paper-29.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-8987fde1-2569-48e1-b836-affe4cee3f72.png",
+    "label": "Physics-informed heat-release marker discovery",
+    "status": "ok"
+  },
+  {
+    "index": 30,
+    "file": "assets/paper-figures/paper-30.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-07851238-4285-4917-89ed-7bad00e808ac.png",
+    "label": "Flamelet manifold neural networks",
+    "status": "ok"
+  },
+  {
+    "index": 31,
+    "file": "assets/paper-figures/paper-31.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-833e4c6c-fbcc-403f-8be1-dc1a35d4ca2f.png",
+    "label": "On-the-fly ANN for chemical kinetics",
+    "status": "ok"
+  },
+  {
+    "index": 32,
+    "file": "assets/paper-figures/paper-32.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-a39b8d4b-0be8-4215-85d7-c8e4395a261a.png",
+    "label": "Optimal HRR marker in methane flames",
+    "status": "ok"
+  },
+  {
+    "index": 33,
+    "file": "assets/paper-figures/paper-33.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-f3ee919a-e3bc-4d1c-8cf1-7be116a0f546.png",
+    "label": "Optimal chemical markers in syngas flames",
+    "status": "ok"
+  },
+  {
+    "index": 34,
+    "file": "assets/paper-figures/paper-34.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-652cead6-a8a0-44c2-861f-26039ad7bea5.png",
+    "label": "Ghost-cell IBM with conjugate heat transfer",
+    "status": "ok"
+  },
+  {
+    "index": 35,
+    "file": "assets/paper-figures/paper-35.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-f8a378cd-1bc8-4b57-9d9e-39e13a9021c3.png",
+    "label": "Monolithic multiscale porous-media simulation",
+    "status": "ok"
+  },
+  {
+    "index": 36,
+    "file": "assets/paper-figures/paper-36.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-c90b3ccf-fd05-4742-8bf9-de7fbe484937.png",
+    "label": "One-domain pore-resolved multiphase flow",
+    "status": "ok"
+  },
+  {
+    "index": 37,
+    "file": "assets/paper-figures/paper-37.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-e9cd6d4d-ad98-4fa7-bd2c-593efa3bd87f.png",
+    "label": "Patient-specific larynx airflow DNS",
+    "status": "ok"
+  },
+  {
+    "index": 38,
+    "file": "assets/paper-figures/paper-38.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-d2b92a52-8801-4e1a-aa0b-e53eeb2348ea.png",
+    "label": "Autonomous particles for flow-map sampling",
+    "status": "ok"
+  },
+  {
+    "index": 39,
+    "file": "assets/paper-figures/paper-39.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-86a4c04f-5e98-46bb-b036-3ea587ac2b4c.png",
+    "label": "Low-Mach reacting-flow ghost-cell IBM",
+    "status": "ok"
+  },
+  {
+    "index": 40,
+    "file": "assets/paper-figures/paper-40.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-c2935c07-a524-499f-8953-1cc9321be6a7.png",
+    "label": "Turbulent spray combustion in SpraySyn burner",
+    "status": "ok"
+  },
+  {
+    "index": 41,
+    "file": "assets/paper-figures/paper-41.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-b008a955-13e3-43a6-bcad-0ee2b85b44d5.png",
+    "label": "Directional ghost-cell IBM for incompressible flows",
+    "status": "ok"
+  },
+  {
+    "index": 42,
+    "file": "assets/paper-figures/paper-42.jpg",
+    "source": "/var/folders/0b/1kymtyp50cjgml2h_35mzvr40000gn/T/codex-clipboard-cd0a1298-ea16-4dba-b890-08e8ab2bbd32.png",
+    "label": "Improved ghost-cell IBM for compressible flows",
+    "status": "ok"
+  }
+]
