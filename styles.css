@@ -989,6 +989,10 @@ strong {
   padding: 14px 16px 16px;
 }
 
+.research-island:not([open]) > .research-island__content {
+  display: none;
+}
+
 .research-island__content > .research-branch__heading {
   grid-template-columns: 1fr;
 }
