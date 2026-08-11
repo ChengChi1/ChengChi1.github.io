@@ -67,33 +67,47 @@ function initializeResearchWorkflowLoop() {
   }
 
   const svgNamespace = "http://www.w3.org/2000/svg";
+  const loopColors = ["#2b7fa3", "#23806d", "#76578f"];
   const svg = document.createElementNS(svgNamespace, "svg");
   const definitions = document.createElementNS(svgNamespace, "defs");
-  const marker = document.createElementNS(svgNamespace, "marker");
-  const markerArrow = document.createElementNS(svgNamespace, "path");
   const paths = branches.map(() => document.createElementNS(svgNamespace, "path"));
+  const ports = branches.map(() => document.createElementNS(svgNamespace, "circle"));
 
   svg.classList.add("research-workflow__loop");
   svg.setAttribute("aria-hidden", "true");
   svg.setAttribute("focusable", "false");
 
-  marker.id = "research-workflow-loop-arrow";
-  marker.setAttribute("viewBox", "0 0 8 8");
-  marker.setAttribute("refX", "7");
-  marker.setAttribute("refY", "4");
-  marker.setAttribute("markerWidth", "7");
-  marker.setAttribute("markerHeight", "7");
-  marker.setAttribute("orient", "auto");
-  markerArrow.setAttribute("d", "M0 0 L8 4 L0 8 Z");
-  markerArrow.setAttribute("fill", "#2b7fa3");
-  marker.append(markerArrow);
-  definitions.append(marker);
+  branches.forEach((_, index) => {
+    const marker = document.createElementNS(svgNamespace, "marker");
+    const markerArrow = document.createElementNS(svgNamespace, "path");
+
+    marker.id = `research-workflow-loop-arrow-${index + 1}`;
+    marker.setAttribute("viewBox", "0 0 8 8");
+    marker.setAttribute("refX", "7");
+    marker.setAttribute("refY", "4");
+    marker.setAttribute("markerWidth", "7");
+    marker.setAttribute("markerHeight", "7");
+    marker.setAttribute("orient", "auto");
+    markerArrow.setAttribute("d", "M0 0 L8 4 L0 8 Z");
+    markerArrow.setAttribute("fill", loopColors[index]);
+    marker.append(markerArrow);
+    definitions.append(marker);
+  });
+
   svg.append(definitions);
 
-  paths.forEach((path) => {
+  paths.forEach((path, index) => {
     path.classList.add("research-workflow__loop-path");
-    path.setAttribute("marker-end", "url(#research-workflow-loop-arrow)");
+    path.style.stroke = loopColors[index];
+    path.setAttribute("marker-end", `url(#research-workflow-loop-arrow-${index + 1})`);
     svg.append(path);
+  });
+
+  ports.forEach((port, index) => {
+    port.classList.add("research-workflow__loop-port");
+    port.setAttribute("r", "3.2");
+    port.style.fill = loopColors[index];
+    svg.append(port);
   });
 
   workflow.prepend(svg);
@@ -102,9 +116,12 @@ function initializeResearchWorkflowLoop() {
     const workflowRect = workflow.getBoundingClientRect();
     const width = Math.max(1, Math.round(workflowRect.width));
     const height = Math.max(1, Math.round(workflowRect.height));
-    const compact = width < 560;
-    const laneGap = compact ? 6 : 10;
-    const outerInset = compact ? 5 : 8;
+    const stacked = width < 680;
+    const laneGap = stacked ? 6 : 10;
+    const outerInset = stacked ? 5 : 8;
+    const diagnosisContent = workflow.querySelector(
+      ".research-workflow__diagnosis .research-workflow__content",
+    );
 
     svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
     svg.setAttribute("width", String(width));
@@ -112,34 +129,60 @@ function initializeResearchWorkflowLoop() {
 
     branches.forEach((branch, index) => {
       const target = document.getElementById(branch.dataset.loopReturn);
-      const returnLink = branch.querySelector(".research-workflow__return");
       const targetContent = target?.querySelector(".research-workflow__content");
       const targetNumber = target?.querySelector(".research-workflow__number");
 
-      if (!returnLink || !targetContent || !targetNumber) {
+      if (!targetContent || !targetNumber || !diagnosisContent) {
         paths[index].setAttribute("d", "");
+        ports[index].setAttribute("r", "0");
         return;
       }
 
-      const linkRect = returnLink.getBoundingClientRect();
+      const branchRect = branch.getBoundingClientRect();
       const contentRect = targetContent.getBoundingClientRect();
       const numberRect = targetNumber.getBoundingClientRect();
-      const startX = linkRect.right - workflowRect.left + 5;
-      const startY = linkRect.top - workflowRect.top + linkRect.height / 2;
+      const diagnosisRect = diagnosisContent.getBoundingClientRect();
+      const startX = stacked
+        ? branchRect.right - workflowRect.left + 2
+        : branchRect.left - workflowRect.left + branchRect.width / 2;
+      const startY = stacked
+        ? branchRect.top - workflowRect.top + branchRect.height / 2
+        : branchRect.bottom - workflowRect.top + 2;
       const targetX = contentRect.right - workflowRect.left + 1;
       const targetY = numberRect.top - workflowRect.top + numberRect.height / 2;
       const laneX = width - outerInset - index * laneGap;
-      const turnRadius = compact ? 5 : 7;
-      const pathData = [
-        `M ${startX.toFixed(1)} ${startY.toFixed(1)}`,
-        `H ${(laneX - turnRadius).toFixed(1)}`,
-        `Q ${laneX.toFixed(1)} ${startY.toFixed(1)} ${laneX.toFixed(1)} ${(startY - turnRadius).toFixed(1)}`,
-        `V ${(targetY + turnRadius).toFixed(1)}`,
-        `Q ${laneX.toFixed(1)} ${targetY.toFixed(1)} ${(laneX - turnRadius).toFixed(1)} ${targetY.toFixed(1)}`,
-        `H ${targetX.toFixed(1)}`,
-      ].join(" ");
+      const turnRadius = stacked ? 5 : 7;
+      let pathData;
+
+      if (stacked) {
+        pathData = [
+          `M ${startX.toFixed(1)} ${startY.toFixed(1)}`,
+          `H ${(laneX - turnRadius).toFixed(1)}`,
+          `Q ${laneX.toFixed(1)} ${startY.toFixed(1)} ${laneX.toFixed(1)} ${(startY - turnRadius).toFixed(1)}`,
+          `V ${(targetY + turnRadius).toFixed(1)}`,
+          `Q ${laneX.toFixed(1)} ${targetY.toFixed(1)} ${(laneX - turnRadius).toFixed(1)} ${targetY.toFixed(1)}`,
+          `H ${targetX.toFixed(1)}`,
+        ].join(" ");
+      } else {
+        const corridorY =
+          diagnosisRect.bottom - workflowRect.top - 11 - index * 14;
+
+        pathData = [
+          `M ${startX.toFixed(1)} ${startY.toFixed(1)}`,
+          `V ${(corridorY - turnRadius).toFixed(1)}`,
+          `Q ${startX.toFixed(1)} ${corridorY.toFixed(1)} ${(startX + turnRadius).toFixed(1)} ${corridorY.toFixed(1)}`,
+          `H ${(laneX - turnRadius).toFixed(1)}`,
+          `Q ${laneX.toFixed(1)} ${corridorY.toFixed(1)} ${laneX.toFixed(1)} ${(corridorY - turnRadius).toFixed(1)}`,
+          `V ${(targetY + turnRadius).toFixed(1)}`,
+          `Q ${laneX.toFixed(1)} ${targetY.toFixed(1)} ${(laneX - turnRadius).toFixed(1)} ${targetY.toFixed(1)}`,
+          `H ${targetX.toFixed(1)}`,
+        ].join(" ");
+      }
 
       paths[index].setAttribute("d", pathData);
+      ports[index].setAttribute("cx", startX.toFixed(1));
+      ports[index].setAttribute("cy", startY.toFixed(1));
+      ports[index].setAttribute("r", "3.2");
     });
   }
 
